@@ -9,21 +9,21 @@ import Course from "./Components/Course";
 import CreateClasslist from "./Components/CreateClasslist";
 
 function App() {
-  return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Login />} />
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<Login />} />
 
-        <Route path="/home" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="lectures" element={<Lectures />} />
-          <Route path="hall" element={<Hall />} />
-          <Route path="course" element={<Course />} />
-          <Route path="create" element={<CreateClasslist />} />
-        </Route>
-      </Routes>
-    </div>
-  );
+				<Route path="/home" element={<Layout />}>
+					<Route index element={<Home />} />
+					<Route path="lectures" element={<Lectures />} />
+					<Route path="hall" element={<Hall />} />
+					<Route path="course" element={<Course />} />
+					<Route path="create" element={<CreateClasslist />} />
+				</Route>
+			</Routes>
+		</div>
+	);
 }
 
 export default App;

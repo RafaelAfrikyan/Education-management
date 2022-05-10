@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function Course() {
-  return (
-    <div>This is Course page</div>
-  )
+	return (
+		<div>This is Course page</div>
+	);
 }

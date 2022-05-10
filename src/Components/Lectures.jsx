@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function Lectures() {
-  return (
-    <div>This is Lectures page</div>
-  )
+	return (
+		<div>This is Lectures page</div>
+	);
 }

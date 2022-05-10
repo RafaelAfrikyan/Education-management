@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export default function Login() {
-  return (
-    <div>
+	return (
+		<div>
       This is Login page
-      <Link to="/home">Login</Link>
-    </div>
-  );
+			<Link to="/home">Login</Link>
+		</div>
+	);
 }
