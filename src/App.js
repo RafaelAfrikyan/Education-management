@@ -1,19 +1,18 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
-import Login from "./Components/Login";
 import Home from "./Components/Home";
 import Lectures from "./Components/Lectures";
 import Hall from "./Components/Hall";
 import Course from "./Components/Course";
 import CreateClasslist from "./Components/CreateClasslist";
+import Login from "./Pages/Login";
 
 function App() {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Login />} />
-
         <Route path="/home" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="lectures" element={<Lectures />} />
