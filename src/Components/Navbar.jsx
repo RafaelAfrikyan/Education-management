@@ -14,6 +14,7 @@ export default function Navbar() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="navbarWrap">
       <div className="Navbar">
         <Link to="/home">Home</Link>
@@ -23,6 +24,14 @@ export default function Navbar() {
         <Link to="create">Create Classlist</Link>
       </div>
       <Room isActive={isActive} roomRef={roomRef} />
+=======
+    <div className="Navbar">
+      <Link to="/home">Home</Link>
+      <Link to="lectures">Lectures</Link>
+      <Link to="course">Faculties</Link>
+      <Link to="hall">Study hall</Link>
+      <Link to="create">Create Classlist</Link>
+>>>>>>> bfc67417d4d8683516d2560ecd802daec1b7f402
     </div>
   );
 }

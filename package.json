@@ -26,7 +26,6 @@
     "eject": "react-scripts eject",
     "commit": "cz"
   },
-  
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -54,5 +53,6 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     },
-  "eslint.enable": false
+    "eslint.enable": false
+  }
 }
