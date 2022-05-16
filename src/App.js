@@ -2,11 +2,11 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout";
 import Home from "./Components/Home";
-import Lectures from "./Components/Lectures";
 import Hall from "./Components/Hall";
 import Course from "./Components/Course";
 import CreateClasslist from "./Components/CreateClasslist";
-import Login from "./Pages/Login";
+import Lectures from "./Pages/Lecturers/Lectures";
+import Login from "./Pages/Login/Login";
 
 function App() {
   return (
