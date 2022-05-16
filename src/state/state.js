@@ -34,7 +34,9 @@ function createFaculties(university) {
   });
   return obj;
 }
-const faculties = createFaculties(ACA);
+export const faculties = createFaculties(ACA);
+console.log(faculties);
+
 function createLecturers(university) {
   //....
   let lecturersObject = [];
@@ -59,7 +61,7 @@ function createLecturers(university) {
 
   return lecturersObject;
 }
-const lecturers = createLecturers(ACA);
+export const lecturers = createLecturers(ACA);
 
 function createRooms(university) {
   let rooms = {};
@@ -82,7 +84,7 @@ function createRooms(university) {
   });
   return rooms;
 }
-const rooms = createRooms(ACA);
+export const rooms = createRooms(ACA);
 
 function gago(faculties, lecturers, rooms) {
   Object.keys(faculties).forEach((faculty) => {
