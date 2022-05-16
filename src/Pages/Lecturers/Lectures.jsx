@@ -1,5 +1,5 @@
 import React from 'react'
-import DisplayLectures from '../../Components/displayLectures';
+import DisplayLectures from "../../Components/DisplayLectures.jsx";
 
 export default function Lectures() {
   return (

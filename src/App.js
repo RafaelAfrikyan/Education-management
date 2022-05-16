@@ -1,12 +1,12 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Layout from "./Components/Layout";
-import Home from "./Components/Home";
-import Hall from "./Components/Hall";
-import Course from "./Components/Course";
-import CreateClasslist from "./Components/CreateClasslist";
-import Lectures from "./Pages/Lecturers/Lectures";
-import Login from "./Pages/Login/Login";
+import Layout from "./Components/Layout.jsx";
+import Home from "./Components/Home.jsx";
+import Hall from "./Components/Hall.jsx";
+import Course from "./Components/Course.jsx";
+import CreateClasslist from "./Components/CreateClasslist.jsx";
+import Lectures from "./Pages/Lecturers/Lectures.jsx";
+import Login from "./Pages/Login/Login.jsx";
 
 function App() {
   return (
