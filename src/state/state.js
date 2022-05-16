@@ -34,6 +34,7 @@ function createFaculties(university) {
   });
   return obj;
 }
+// console.log(createFaculties(ACA)['Frontend Bootcamp'], 'student')
 const faculties = createFaculties(ACA);
 function createLecturers(university) {
   //....
@@ -59,16 +60,16 @@ function createLecturers(university) {
 
   return lecturersObject;
 }
-const lecturers = createLecturers(ACA);
+export const lecturers = createLecturers(ACA);
 
-function createRooms(university) {
+export function createRooms(university) {
   let rooms = {};
   Object.keys(university.rooms).forEach((size) => {
     rooms[size] = {};
     university.rooms[size].forEach((num) => {
       rooms[size][num] = {
         1: {
-          1: null,
+          1: 'JS',
           2: null,
           3: null,
           4: null,
@@ -82,7 +83,7 @@ function createRooms(university) {
   });
   return rooms;
 }
-const rooms = createRooms(ACA);
+export const rooms = createRooms(ACA);
 
 function gago(faculties, lecturers, rooms) {
   Object.keys(faculties).forEach((faculty) => {
@@ -127,7 +128,7 @@ function gago(faculties, lecturers, rooms) {
   });
 }
 gago(faculties, lecturers, rooms);
-console.log(faculties["Frontend Bootcamp"]);
+// console.log(faculties["Frontend Bootcamp"]);
 
 // {
 //   'Frontend Bootcamp': {
