@@ -34,5 +34,7 @@
             "error",
             "always"
         ]
-    }
+    },
+    "eslint.enable" : false
+
 }
