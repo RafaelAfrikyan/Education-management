@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles_lecturers.css";
 import img from "../assets/lecturer.webp";
+import { Link } from "react-router-dom";
 
 function SingleLecturer({ lecturer }) {
   const { name, surname, speciality } = lecturer;
@@ -13,7 +14,9 @@ function SingleLecturer({ lecturer }) {
         </div>
         <div className="speciality-wrapper">{speciality}</div>
         <div className="button-wrapper">
-          <button>Learn more</button>
+          <Link to={`${name}${surname}`}>
+            <button>Learn more</button>
+          </Link>
         </div>
       </div>
     </div>
