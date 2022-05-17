@@ -10,6 +10,7 @@ import CreateClasslist from "./Components/CreateClasslist.jsx";
 // import Room from "./Components/Hall.jsx";
 import RoomsTimetable from "./Components/RoomsTimetable.js";
 import Lecturer from "./Components/Lecturer.js";
+import Faculties from "./Pages/Faculties/Faculties.jsx";
 
 function App() {
   return (
@@ -23,7 +24,7 @@ function App() {
           <Route path="home/:roomId" element={<RoomsTimetable />} />
           <Route path="lectures/:lecturerName" element={<Lecturer />} />
 
-          <Route path="course" element={<Course />} />
+          <Route path="course" element={<Faculties />} />
           <Route path="create" element={<CreateClasslist />} />
         </Route>
       </Routes>

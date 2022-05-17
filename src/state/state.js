@@ -35,7 +35,7 @@ function createFaculties(university) {
   return obj;
 }
 // console.log(createFaculties(ACA)['Frontend Bootcamp'], 'student')
-const faculties = createFaculties(ACA);
+export const faculties = createFaculties(ACA);
 function createLecturers(university) {
   //....
   let lecturersObject = [];
