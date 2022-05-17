@@ -7,3 +7,47 @@
   align-items: center;
   gap: 25px;
 }
+.roomModal {
+  width: 25%;
+  min-height: 60px;
+  margin-left: 365px;
+  display: none;
+  position: absolute;
+  z-index: 99;
+}
+.roomActiveModal {
+  width: 20%;
+  min-height: 60px;
+  margin-left: 535px;
+  position: absolute;
+  z-index: 99;
+}
+
+.roomNumber {
+  background-color: rgb(240, 240, 240);
+  height: 25px;
+  margin: 5px;
+  cursor: pointer;
+}
+.roomNumber:hover {
+  background-color: rgb(104, 104, 104);
+}
+
+.container {
+  display: flex;
+}
+
+.table-wrap {
+  display: flex;
+  border: 1px solid black;
+} 
+
+.table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+}
+
+.day {
+  border-bottom: 1px solid black;
+}
