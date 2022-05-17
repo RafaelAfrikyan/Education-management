@@ -4,7 +4,7 @@ import Layout from "./Components/Layout.jsx";
 import Home from "./Components/Home.jsx";
 import Hall from "./Components/Hall.jsx";
 import CreateClasslist from "./Components/CreateClasslist.jsx";
-import Login from "./Pages/Login/Login.jsx";
+
 import Faculties from "./Pages/Faculties/Faculties.jsx";
 import Lectures from "./Pages/Lectures.jsx";
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={<Login />} />
+        <Route path="/" element="" />
         <Route path="/home" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="lectures" element={<Lectures />} />
