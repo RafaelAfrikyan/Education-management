@@ -12,11 +12,11 @@ function DrowTable({ room }) {
       <div className="table-wrap">
         {Object.keys(room).map((day, i) => {
           return (
-            <div className="table">
+            <div key={i} className="table">
               <div className="day">Day{day}</div>
               {Object.keys(room[day]).map((hour, i) => {
                 return (
-                  <div>
+                  <div key={i}>
                     <div>{room[day][hour]}</div>
                   </div>
                 );
