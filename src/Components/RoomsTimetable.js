@@ -12,7 +12,7 @@ function RoomsTimetable() {
       {Object.keys(rooms).map((size, i) =>
         Object.keys(rooms[size]).map((room, i) => (
 
-          room == roomId && <DrowTable room={rooms[size][room]} />
+          room == roomId && <DrowTable key={i} room={rooms[size][room]} />
         ))
       )}
     </>
