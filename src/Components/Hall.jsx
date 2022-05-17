@@ -16,7 +16,7 @@ export default function Room({ roomRef, isActive }) {
     <div ref={roomRef} className={isActive ? "roomActiveModal" : "roomModal"}>
       {Object.keys(roomSize).map((size, i) => {
         return (
-          <Accordion>
+          <Accordion key={i}>
             <AccordionSummary
               expandIcon={<ExpandMoreIcon />}
               aria-controls="panel2a-content"
@@ -25,15 +25,11 @@ export default function Room({ roomRef, isActive }) {
               <Typography>{`Room Size ${size}`}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              {Object.keys(roomSize[size]).map((number) => {
-                
+              {Object.keys(roomSize[size]).map((number, i) => {
                 return (
-                  <Typography>
+                  <Typography key={i}>
                     <Link to={`home/${number}`}>
-                      {" "}
-                      <div className="roomNumber">
-                        {`Number ${number}`}{" "}
-                      </div>{" "}
+                      <span className="roomNumber">{`Number ${number}`} </span>{" "}
                     </Link>
                   </Typography>
                 );

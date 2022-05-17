@@ -10,10 +10,10 @@ function RoomsTimetable() {
   return (
     <>
       {Object.keys(rooms).map((size, i) =>
-        Object.keys(rooms[size]).map((room, i) => (
-
-          room == roomId && <DrowTable room={rooms[size][room]} />
-        ))
+        Object.keys(rooms[size]).map(
+          (room, i) =>
+            room == roomId && <DrowTable key={i} room={rooms[size][room]} />
+        )
       )}
     </>
   );
