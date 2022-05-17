@@ -1,3 +1,5 @@
+import { combineReducers, createStore } from "redux";
+
 import { ACA } from "./data.js";
 
 function createFaculties(university) {
@@ -34,8 +36,6 @@ function createFaculties(university) {
   });
   return obj;
 }
-// console.log(createFaculties(ACA)['Frontend Bootcamp'], 'student')
-export const faculties = createFaculties(ACA);
 function createLecturers(university) {
   //....
   let lecturersObject = [];
@@ -60,8 +60,6 @@ function createLecturers(university) {
 
   return lecturersObject;
 }
-export const lecturers = createLecturers(ACA);
-
 export function createRooms(university) {
   let rooms = {};
   Object.keys(university.rooms).forEach((size) => {
@@ -69,7 +67,7 @@ export function createRooms(university) {
     university.rooms[size].forEach((num) => {
       rooms[size][num] = {
         1: {
-          1: 'JS',
+          1: null,
           2: null,
           3: null,
           4: null,
@@ -83,51 +81,141 @@ export function createRooms(university) {
   });
   return rooms;
 }
+
 export const rooms = createRooms(ACA);
+export const faculties = createFaculties(ACA);
+export const lecturers = createLecturers(ACA);
 
-function gago(faculties, lecturers, rooms) {
-  Object.keys(faculties).forEach((faculty) => {
-    Object.keys(faculties[faculty].lessons).forEach((lesson, i) => {
-      if (faculties[faculty].lessons[lesson] !== 0) {
-        lecturers.forEach((item) => {
-          if (item.speciality === lesson) {
-            Object.keys(item.timeTable).forEach((day) => {
-              Object.keys(item.timeTable[day]).forEach((lectureHour) => {
-                if (!item.timeTable[day][lectureHour]) {
-                  Object.keys(rooms).forEach((size) => {
-                    // console.log(rooms[size]);
+export const ACTION_TYPES = {
+  ROOMS_TABLE: "ROOMS_TABLE",
+  LECTURER_TABLE: "LECTURER_TABLE",
+  FACULTIES_TABLE: "FACULTIES_TABLE",
+};
 
-                    if (
-                      size == faculties[faculty].count ||
-                      size - faculties[faculty].count <= 10 ||
-                      size - faculties[faculty].count <= 20
-                    ) {
-                      Object.keys(rooms[size]).forEach((room) => {
-                        Object.keys(rooms[size][room]).forEach((day) => {
-                          Object.keys(rooms[size][room][day]).forEach(
-                            (roomHour) => {
-                              if (!rooms[size][room][day][roomHour]) {
-                                if (faculties[faculty].lessons[lesson]) {
-                                  faculties[faculty].lessons[lesson] =
-                                    faculties[faculty].lessons[lesson] - 1;
-                                }
-                              }
-                            }
-                          );
-                        });
-                      });
+const initialState = {
+  faculties,
+  rooms,
+  lecturers,
+};
+
+function lecturerReducer(state = [], action) {
+  switch (action.type) {
+    case ACTION_TYPES.LECTURER_TABLE: {
+      console.log(action.payload);
+      state.forEach((lecturer, i) => {
+        if (
+          lecturer.name == action.payload.lecturerName &&
+          lecturer.surname == action.payload.lecturerSurname
+        ) {
+          Object.keys(lecturer['timeTable']).forEach(day => {
+        if(day == action.payload.roomDay) {
+          Object.keys(lecturer['timeTable'][day]).forEach(hour => {
+            if(hour == action.payload.roomHour) {
+              lecturer['timeTable'][day][hour] = action.payload.roomNumber
+            }
+          })
+        }
+
+          })
+        }
+      });
+    }
+  }
+
+  return state;
+}
+function facultiesReducer(state = {}, action) {
+  switch (ACTION_TYPES) {
+  }
+  return state;
+}
+
+function roomsReducer(state = {}, action) {
+  switch (action.type) {
+    case ACTION_TYPES.ROOMS_TABLE: {
+      Object.keys(state).forEach((size) => {
+        if (size == action.payload.roomSize) {
+          Object.keys(state[size]).forEach((number) => {
+            if (number == action.payload.roomNumber) {
+              Object.keys(state[size][number]).forEach((day) => {
+                if (day === action.payload.roomDay) {
+                  Object.keys(state[size][number][day]).forEach((hour) => {
+                    if (hour === action.payload.roomHour) {
+                      state[size][number][day][hour] =
+                        action.payload.facultiesName;
+                      console.log(state);
                     }
                   });
                 }
               });
-            });
-          }
-        });
-      }
-    });
-  });
+            }
+          });
+        }
+      });
+    }
+  }
+  return state;
 }
-gago(faculties, lecturers, rooms);
+
+function reducer(state, action) {
+  switch (ACTION_TYPES) {
+  }
+  return state;
+}
+
+export const store = createStore(
+  combineReducers({
+    faculties: facultiesReducer,
+    rooms: roomsReducer,
+    lecturers: lecturerReducer,
+  }),
+  initialState
+);
+
+// function gago(faculties, lecturers, rooms) {
+//   Object.keys(faculties).forEach((faculty) => {
+//     Object.keys(faculties[faculty].lessons).forEach((lesson, i) => {
+//       if (faculties[faculty].lessons[lesson] !== 0) {
+//         lecturers.forEach((item) => {
+//           if (item.speciality === lesson) {
+//             Object.keys(item.timeTable).forEach((day) => {
+//               Object.keys(item.timeTable[day]).forEach((lectureHour) => {
+//                 if (!item.timeTable[day][lectureHour]) {
+//                   Object.keys(rooms).forEach((size) => {
+//                     // console.log(rooms[size]);
+
+//                     if (
+//                       size == faculties[faculty].count ||
+//                       size - faculties[faculty].count <= 10 ||
+//                       size - faculties[faculty].count <= 20
+//                     ) {
+//                       Object.keys(rooms[size]).forEach((room) => {
+//                         Object.keys(rooms[size][room]).forEach((day) => {
+//                           Object.keys(rooms[size][room][day]).forEach(
+//                             (roomHour) => {
+//                               if (!rooms[size][room][day][roomHour]) {
+//                                 if (faculties[faculty].lessons[lesson]) {
+//                                   faculties[faculty].lessons[lesson] =
+//                                     faculties[faculty].lessons[lesson] - 1;
+//                                 }
+//                               }
+//                             }
+//                           );
+//                         });
+//                       });
+//                     }
+//                   });
+//                 }
+//               });
+//             });
+//           }
+//         });
+//       }
+//     });
+//   });
+// }
+
+// gago(faculties, lecturers, rooms);
 // console.log(faculties["Frontend Bootcamp"]);
 
 // {
@@ -159,29 +247,6 @@ gago(faculties, lecturers, rooms);
 //       '4': [Object],
 //       '5': [Object]
 //     },
-//     '2': {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     },
-//     '3': {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     },
-//     '4': {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-
 // }
 
 // [
@@ -197,136 +262,5 @@ gago(faculties, lecturers, rooms);
 //       '5': [Object]
 //     }
 //   },
-//   {
-//     name: 'Avet',
-//     surname: 'Badalyan',
-//     speciality: 'UI/UX',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Eduard',
-//     surname: 'Harutyunyan',
-//     speciality: 'ReactJS',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Norayr',
-//     surname: 'Hayrikyan',
-//     speciality: 'Project Management',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Elen',
-//     surname: 'Ghazaryan',
-//     speciality: 'JavaScript',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Edgar',
-//     surname: 'Khudoyan',
-//     speciality: 'NodeJS',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Rafayel',
-//     surname: 'Afrikyan',
-//     speciality: 'CSS',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Hovhannes',
-//     surname: 'Kocharyan',
-//     speciality: 'ReactJS',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Sona',
-//     surname: 'Shahgeldyan',
-//     speciality: 'NodeJS',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Elmira',
-//     surname: 'Avagyan',
-//     speciality: 'JavaScript',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Vrezh',
-//     surname: 'Oganesyan',
-//     speciality: 'HTML',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   },
-//   {
-//     name: 'Mher',
-//     surname: 'Armenia',
-//     speciality: 'Python',
-//     timeTable: {
-//       '1': [Object],
-//       '2': [Object],
-//       '3': [Object],
-//       '4': [Object],
-//       '5': [Object]
-//     }
-//   }
+//
 // ]

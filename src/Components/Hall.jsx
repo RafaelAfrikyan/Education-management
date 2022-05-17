@@ -8,10 +8,11 @@ import { ACA } from "../state/data";
 import { createRooms } from "../state/state";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 export default function Room({ roomRef, isActive }) {
-  let roomSize = createRooms(ACA);
-
+  // let roomSize = createRooms(ACA);
+let roomSize = useSelector((state)=> state.rooms)
   return (
     <div ref={roomRef} className={isActive ? "roomActiveModal" : "roomModal"}>
       {Object.keys(roomSize).map((size, i) => {

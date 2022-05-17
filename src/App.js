@@ -6,7 +6,7 @@ import Home from "./Components/Home.jsx";
 import Lectures from "./Components/Lectures.jsx";
 
 import Course from "./Components/Course.jsx";
-import CreateClasslist from "./Components/CreateClasslist.jsx";
+import CreateClasslist from "./Pages/Faculties/CreateClasslist.jsx";
 // import Room from "./Components/Hall.jsx";
 import RoomsTimetable from "./Components/RoomsTimetable.js";
 import Lecturer from "./Components/Lecturer.js";
