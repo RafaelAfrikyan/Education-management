@@ -1,8 +1,15 @@
-import React from 'react'
+import React from "react";
+import SingleLecturer from "../Components/SingleLecturer";
+import { lecturers } from "../state/state";
 
-export default function Lectures() {
+function Lecturers() {
   return (
-    <div>
+    <div className="lecturers-wrapper">
+      {lecturers.map((lecturer, i) => (
+        <SingleLecturer key={i} lecturer={lecturer} />
+      ))}
     </div>
-  )
+  );
 }
+
+export default Lecturers;

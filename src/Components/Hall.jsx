@@ -29,7 +29,7 @@ export default function Room({ roomRef, isActive }) {
                 return (
                   <Typography key={i}>
                     <Link to={`home/${number}`}>
-                      <span className="roomNumber">{`Number ${number}`} </span>{" "}
+                      <span className="roomNumber">{`Number ${number}`} </span>
                     </Link>
                   </Typography>
                 );

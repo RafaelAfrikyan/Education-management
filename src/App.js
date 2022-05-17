@@ -7,7 +7,7 @@ import Lectures from "./Components/Lectures.jsx";
 
 import Course from "./Components/Course.jsx";
 import CreateClasslist from "./Components/CreateClasslist.jsx";
-import Room from "./Components/Hall.jsx";
+// import Room from "./Components/Hall.jsx";
 import RoomsTimetable from "./Components/RoomsTimetable.js";
 
 function App() {
