@@ -8,7 +8,7 @@ export const ACA = {
   },
   lecturers: [
     { name: "Gago", surname: "Gagyan", speciality: "Java" },
-    { name: "Avet", surname: "Badalyan", speciality: "UI/UX" },
+    { name: "Avet", surname: "Badalyan", speciality: "UI-UX" },
     { name: "Eduard", surname: "Harutyunyan", speciality: "ReactJS" },
     { name: "Norayr", surname: "Hayrikyan", speciality: "Project Management" },
     { name: "Elen", surname: "Ghazaryan", speciality: "JavaScript" },
@@ -73,9 +73,9 @@ export const ACA = {
         { name: "name", surname: "surname" },
       ],
     },
-    "UI/IX Bootcamp": {
+    "UI-UX Bootcamp": {
       syllabus: [
-        { "UI/UX": 5 },
+        { "UI-UX": 5 },
         { HTML: 5 },
         { CSS: 5 },
         { "Project Management": 2 },
@@ -170,7 +170,7 @@ export const ACA = {
     },
     "Project Management": {
       syllabus: [
-        { "UI/UX": 5 },
+        { "UI-UX": 5 },
         { HTML: 3 },
         { CSS: 2 },
         { "Project Management": 7 },
