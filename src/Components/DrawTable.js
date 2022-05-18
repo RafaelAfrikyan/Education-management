@@ -1,6 +1,6 @@
 import React from "react";
 
-function DrowTable({ room }) {
+function DrawTable({ param }) {
   return (
     <div className="container">
       <div>
@@ -10,14 +10,14 @@ function DrowTable({ room }) {
         <div>4</div>
       </div>
       <div className="table-wrap">
-        {Object.keys(room).map((day, i) => {
+        {Object.keys(param).map((day, i) => {
           return (
             <div key={i} className="table">
               <div className="day">Day{day}</div>
-              {Object.keys(room[day]).map((hour, i) => {
+              {Object.keys(param[day]).map((hour, i) => {
                 return (
                   <div key={i}>
-                    <div>{room[day][hour]}</div>
+                    <div>{param[day][hour]}</div>
                   </div>
                 );
               })}
@@ -29,4 +29,4 @@ function DrowTable({ room }) {
   );
 }
 
-export default DrowTable;
+export default DrawTable;

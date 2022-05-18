@@ -3,17 +3,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { rooms } from "../state/state.js";
-import DrowTable from "./DrowTable.js";
+import DrawTable from "./DrawTable.js";
 
 function RoomsTimetable() {
   const { roomId } = useParams();
   return (
     <>
       {Object.keys(rooms).map((size, i) =>
-        Object.keys(rooms[size]).map((room, i) => (
-
-          room == roomId && <DrowTable key={i} room={rooms[size][room]} />
-        ))
+        Object.keys(rooms[size]).map(
+          (room, i) =>
+            room == roomId && <DrawTable key={i} param={rooms[size][room]} />
+        )
       )}
     </>
   );
