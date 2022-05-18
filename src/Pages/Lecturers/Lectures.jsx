@@ -1,6 +1,6 @@
 import React from "react";
-import SingleLecturer from "../Components/SingleLecturer";
-import { lecturers } from "../state/state";
+import SingleLecturer from "../../Components/SingleLecturer.js";
+import { lecturers } from "../../state/state";
 
 function Lecturers() {
   return (

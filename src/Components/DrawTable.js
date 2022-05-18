@@ -1,6 +1,6 @@
 import React from "react";
 
-function DrowTable({ param }) {
+function DrawTable({ param }) {
   return (
     <div className="container">
       <div>
@@ -29,4 +29,4 @@ function DrowTable({ param }) {
   );
 }
 
-export default DrowTable;
+export default DrawTable;
