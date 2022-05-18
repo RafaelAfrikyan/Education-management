@@ -101,22 +101,20 @@ const initialState = {
 function lecturerReducer(state = [], action) {
   switch (action.type) {
     case ACTION_TYPES.LECTURER_TABLE: {
-      console.log(action.payload);
       state.forEach((lecturer, i) => {
         if (
           lecturer.name == action.payload.lecturerName &&
           lecturer.surname == action.payload.lecturerSurname
         ) {
-          Object.keys(lecturer['timeTable']).forEach(day => {
-        if(day == action.payload.roomDay) {
-          Object.keys(lecturer['timeTable'][day]).forEach(hour => {
-            if(hour == action.payload.roomHour) {
-              lecturer['timeTable'][day][hour] = action.payload.roomNumber
+          Object.keys(lecturer["timeTable"]).forEach((day) => {
+            if (day == action.payload.roomDay) {
+              Object.keys(lecturer["timeTable"][day]).forEach((hour) => {
+                if (hour == action.payload.roomHour) {
+                  lecturer["timeTable"][day][hour] = action.payload.roomNumber;
+                }
+              });
             }
-          })
-        }
-
-          })
+          });
         }
       });
     }
@@ -125,7 +123,27 @@ function lecturerReducer(state = [], action) {
   return state;
 }
 function facultiesReducer(state = {}, action) {
-  switch (ACTION_TYPES) {
+  // console.log(state);
+  switch (action.type) {
+    case ACTION_TYPES.FACULTIES_TABLE: {
+      Object.keys(state).forEach((faculty) => {
+        if (faculty == action.payload.facultiesName) {
+          Object.keys(state[faculty]["timeTable"]).forEach((day) => {
+            if (day == action.payload.roomDay) {
+              Object.keys(state[faculty]["timeTable"][day]).forEach((hour) => {
+                if (hour == action.payload.roomHour) {
+                  state[faculty]["timeTable"][day][hour] =
+                    action.payload.lecturerName;
+                  state[faculty].lessons[action.payload.lesson] =
+                    state[faculty].lessons[action.payload.lesson] - 1;
+                  console.log(state[faculty].lessons[action.payload.lesson]);
+                }
+              });
+            }
+          });
+        }
+      });
+    }
   }
   return state;
 }
@@ -143,7 +161,7 @@ function roomsReducer(state = {}, action) {
                     if (hour === action.payload.roomHour) {
                       state[size][number][day][hour] =
                         action.payload.facultiesName;
-                      console.log(state);
+                      // console.log(state);
                     }
                   });
                 }
@@ -171,52 +189,6 @@ export const store = createStore(
   }),
   initialState
 );
-
-// function gago(faculties, lecturers, rooms) {
-//   Object.keys(faculties).forEach((faculty) => {
-//     Object.keys(faculties[faculty].lessons).forEach((lesson, i) => {
-//       if (faculties[faculty].lessons[lesson] !== 0) {
-//         lecturers.forEach((item) => {
-//           if (item.speciality === lesson) {
-//             Object.keys(item.timeTable).forEach((day) => {
-//               Object.keys(item.timeTable[day]).forEach((lectureHour) => {
-//                 if (!item.timeTable[day][lectureHour]) {
-//                   Object.keys(rooms).forEach((size) => {
-//                     // console.log(rooms[size]);
-
-//                     if (
-//                       size == faculties[faculty].count ||
-//                       size - faculties[faculty].count <= 10 ||
-//                       size - faculties[faculty].count <= 20
-//                     ) {
-//                       Object.keys(rooms[size]).forEach((room) => {
-//                         Object.keys(rooms[size][room]).forEach((day) => {
-//                           Object.keys(rooms[size][room][day]).forEach(
-//                             (roomHour) => {
-//                               if (!rooms[size][room][day][roomHour]) {
-//                                 if (faculties[faculty].lessons[lesson]) {
-//                                   faculties[faculty].lessons[lesson] =
-//                                     faculties[faculty].lessons[lesson] - 1;
-//                                 }
-//                               }
-//                             }
-//                           );
-//                         });
-//                       });
-//                     }
-//                   });
-//                 }
-//               });
-//             });
-//           }
-//         });
-//       }
-//     });
-//   });
-// }
-
-// gago(faculties, lecturers, rooms);
-// console.log(faculties["Frontend Bootcamp"]);
 
 // {
 //   'Frontend Bootcamp': {

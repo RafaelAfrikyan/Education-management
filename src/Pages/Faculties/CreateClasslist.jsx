@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 // import { faculties } from "../../state/state.js";
 import { useSelector, useDispatch } from "react-redux";
 import { useRef } from "react";
@@ -10,12 +10,12 @@ export default function CreateClasslist() {
     return state;
   });
 
-  let obj = Object.keys(faculties).filter((faculty, i) => {
-    return Object.keys(faculties[faculty].lessons).filter((item) => {
-      return faculties[faculty].lessons[item] !== 0;
-    });
-  });
-
+  // Object.keys(faculties).filter((faculty, i) => {
+  //   return Object.keys(faculties[faculty].lessons).filter((item) => {
+  //     return faculties[faculty].lessons[item] > 0;
+  //   });
+  // });
+  // console.log();
   let refer = useRef(null);
 
   const gago = (faculty, lecturers, rooms) => {
@@ -39,8 +39,8 @@ export default function CreateClasslist() {
                             (roomHour) => {
                               if (!rooms[size][room][day][roomHour]) {
                                 if (faculties[faculty].lessons[lesson]) {
-                                  faculties[faculty].lessons[lesson] =
-                                    faculties[faculty].lessons[lesson] - 1;
+                                  // faculties[faculty].lessons[lesson] =
+                                  //   faculties[faculty].lessons[lesson] - 1;
                                   dispatch({
                                     type: ACTION_TYPES.ROOMS_TABLE,
                                     payload: {
@@ -53,6 +53,7 @@ export default function CreateClasslist() {
                                       roomHour: roomHour,
                                     },
                                   });
+
                                   dispatch({
                                     type: ACTION_TYPES.LECTURER_TABLE,
                                     payload: {
@@ -63,6 +64,19 @@ export default function CreateClasslist() {
                                       roomNumber: room,
                                       roomDay: day,
                                       roomHour: roomHour,
+                                    },
+                                  });
+                                  dispatch({
+                                    type: ACTION_TYPES.FACULTIES_TABLE,
+                                    payload: {
+                                      lecturerName: item.name,
+                                      lecturerSurname: item.surname,
+                                      facultiesName: faculty,
+                                      roomSize: size,
+                                      roomNumber: room,
+                                      roomDay: day,
+                                      roomHour: roomHour,
+                                      lesson: lesson,
                                     },
                                   });
                                 }
@@ -84,20 +98,29 @@ export default function CreateClasslist() {
 
   return (
     <div>
-      {obj.map((element) => {
-        return (
-          <div
-            ref={refer}
-            onClick={(e) => {
-              refer.current.value = e.target.innerText;
+      {Object.keys(faculties)
+        .filter((faculty, i) => {
+          return Object.keys(faculties[faculty].lessons).map((item) => {
+            console.log(faculty, 'lpppppp');
+            return faculties[faculty].lessons[item] > 100;
+            
+          });
+        })
+        .map((element) => {
+          console.log(element);
+          return (
+            <div
+              ref={refer}
+              onClick={(e) => {
+                refer.current.value = e.target.innerText;
 
-              gago(refer.current.value, lecturers, rooms);
-            }}
-          >
-            {element}
-          </div>
-        );
-      })}
+                gago(refer.current.value, lecturers, rooms);
+              }}
+            >
+              {element}
+            </div>
+          );
+        })}
     </div>
   );
 }
