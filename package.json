@@ -55,6 +55,13 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     },
+<<<<<<< HEAD
     "eslint.enable": false
   }
 }
+=======
+  "eslint.enable": false
+  }
+}
+
+>>>>>>> 46949b7d7e1f32b432ade8ea5c2391b0393fd98c
