@@ -1,6 +1,6 @@
 import React from "react";
 import "./styles_lecturers.css";
-import img from "../assets/lecturer.webp";
+import img from "../../assets/lecturer.webp";
 import { Link } from "react-router-dom";
 
 function SingleLecturer({ lecturer }) {
