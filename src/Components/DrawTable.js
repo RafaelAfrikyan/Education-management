@@ -37,34 +37,34 @@ function DrawTable({ param }) {
                       ref={divRef}
                       className={
                         divRef.current === "Elen"
-                          ? "timetable-activ-Elen"
+                          ? "timetable-div timetable-activ-Elen"
                           : divRef.current === "Vrezh" ||
                             divRef.current === "1" ||
                             divRef.current === "2" ||
                             divRef.current === "3"
-                          ? "timetable-activ-Vrezh"
+                          ? "timetable-div timetable-activ-Vrezh"
                           : divRef.current === "Rafayel" ||
                             divRef.current === "4" ||
                             divRef.current === "5" ||
                             divRef.current === "6"
-                          ? "timetable-activ-Rafayel"
+                          ? "timetable-div timetable-activ-Rafayel"
                           : divRef.current === "Avet" ||
                             divRef.current === "7" ||
                             divRef.current === "8" ||
                             divRef.current === "9"
-                          ? "timetable-activ-Avet"
+                          ? "timetable-div timetable-activ-Avet"
                           : divRef.current === "Mher" ||
                             divRef.current === "10" ||
                             divRef.current === "11" ||
                             divRef.current === "12" ||
                             divRef.current === "13"
-                          ? "timetable-activ-Mher"
+                          ? "timetable-div timetable-activ-Mher"
                           : divRef.current === "Gago"
-                          ? "timetable-activ-Gago"
+                          ? "timetable-div timetable-activ-Gago"
                           : divRef.current === "Norayr"
-                          ? "timetable-activ-Norayr"
+                          ? "timetable-div timetable-activ-Norayr"
                           : divRef.current === "Eduard"
-                          ? "timetable-activ-Eduard"
+                          ? "timetable-div timetable-activ-Eduard"
                           : "timetable-div"
                       }
                       key={i}
