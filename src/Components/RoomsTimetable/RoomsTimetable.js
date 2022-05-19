@@ -2,8 +2,8 @@
 
 import React from "react";
 import { useParams } from "react-router-dom";
-import { rooms } from "../state/state.js";
-import DrawTable from "./DrawTable.js";
+import { rooms } from "../../state/state.js";
+import DrawTable from "../DrawTable/DrawTable.js";
 
 function RoomsTimetable() {
   const { roomId } = useParams();
