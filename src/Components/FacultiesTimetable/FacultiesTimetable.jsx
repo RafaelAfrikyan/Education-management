@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import DrawTable from "./DrawTable.js";
-import { faculties } from "../state/state.js";
+import DrawTable from "../DrawTable/DrawTable.js";
+import { faculties } from "../../state/state.js";
 
 export default function FacultiesTimetable() {
   const { faculty } = useParams();

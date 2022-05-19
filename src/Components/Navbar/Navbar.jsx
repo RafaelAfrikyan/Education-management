@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { ACA } from "../state/data";
-import { createRooms } from "../state/state";
-import Room from "./Hall";
+import { ACA } from "../../state/data";
+import { createRooms } from "../../state/state";
+import Room from "../Hall/Hall";
 import { useRef, useState } from "react";
 
 export default function Navbar() {

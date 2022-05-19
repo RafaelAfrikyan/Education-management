@@ -173,7 +173,7 @@ export const ACA = {
         { "UI/UX": 5 },
         { HTML: 3 },
         { CSS: 2 },
-        { "Project Management": 7 },
+        { "Project Management": 7 }, 
       ],
       students: [
         { name: "name", surname: "surname" },
