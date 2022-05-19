@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { faculties } from "../state/state.js";
-import SingleFaculty from "./SingleFaculty.jsx";
+import { faculties } from "../../state/state.js";
+import SingleFaculty from "../SingleFaculty/SingleFaculty.jsx";
 
 export default function DisplayFaculties() {
   let facultiesArray = Object.keys(faculties);

@@ -1,15 +1,15 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Layout from "./Components/Layout.jsx";
+import Layout from "./Components/Layout/Layout.jsx";
 import Lecturers from "./Pages/Lecturers/Lectures.jsx";
-import Home from "./Components/Home.jsx";
-import CreateClasslist from "./Components/CreateClasslist.jsx";
+import Home from "./Components/Home/Home.jsx";
+import CreateClasslist from "./Components/CreateClasslist/CreateClasslist.jsx";
 // import Room from "./Components/Hall.jsx";
-import RoomsTimetable from "./Components/RoomsTimetable.js";
+import RoomsTimetable from "./Components/RoomsTimetable/RoomsTimetable.js";
 import Lecturer from "./Pages/Lecturer/Lecturer.js";
 import Faculties from "./Pages/Faculties/Faculties.jsx";
 import Login from "./Pages/Login/Login.jsx";
-import FacultiesTimetable from "./Components/FacultiesTimetable.jsx";
+import FacultiesTimetable from "./Components/FacultiesTimetable/FacultiesTimetable.jsx";
 
 
 

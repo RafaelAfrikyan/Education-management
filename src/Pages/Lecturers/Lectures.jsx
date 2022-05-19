@@ -1,5 +1,5 @@
 import React from "react";
-import SingleLecturer from "../../Components/SingleLecturer.js";
+import SingleLecturer from "../../Components/SingleLecturer/SingleLecturer.js";
 import { lecturers } from "../../state/state";
 
 function Lecturers() {
