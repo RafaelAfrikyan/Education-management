@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useRef } from "react";
 import { ACTION_TYPES } from "../../state/state";
+import "./../../App.css";
 
 export default function CreateClasslist() {
   const dispatch = useDispatch();
@@ -101,15 +102,15 @@ export default function CreateClasslist() {
       {Object.keys(faculties)
         .filter((faculty, i) => {
           return Object.keys(faculties[faculty].lessons).map((item) => {
-            console.log(faculty, 'lpppppp');
+            console.log(faculty, "lpppppp");
             return faculties[faculty].lessons[item] > 100;
-            
           });
         })
         .map((element) => {
           console.log(element);
           return (
             <div
+              className="create-button"
               ref={refer}
               onClick={(e) => {
                 refer.current.value = e.target.innerText;
