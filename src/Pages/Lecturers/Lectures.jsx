@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import SingleLecturer from "../../Components/SingleLecturer.js";
-import { lecturers } from "../../state/state.js";
+import SingleLecturer from "../../Components/SingleLecturer";
+// import { lecturers } from "../state/state";
 
 function Lecturers() {
   const lecturers = useSelector(function(state) {
