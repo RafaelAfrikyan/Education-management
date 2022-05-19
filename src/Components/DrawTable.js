@@ -1,13 +1,7 @@
 import React from "react";
 import { useRef } from "react";
 
-<<<<<<< HEAD:src/Components/DrowTable.js
-function DrowTable({ param }) {
-  const divRef = useRef(null);
-
-=======
 function DrawTable({ param }) {
->>>>>>> 46949b7d7e1f32b432ade8ea5c2391b0393fd98c:src/Components/DrawTable.js
   return (
     <div className="wrapper">
       <div className="day-timetabel">
