@@ -3,14 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout.jsx";
 import Lecturers from "./Pages/Lecturers/Lectures.jsx";
 import Home from "./Components/Home.jsx";
-<<<<<<< HEAD
-import Lectures from "./Components/Lectures.jsx";
+// import Lectures from "./Components/Lectures.jsx";
 
 import Course from "./Components/Course.jsx";
 import CreateClasslist from "./Pages/Faculties/CreateClasslist.jsx";
-=======
-import CreateClasslist from "./Components/CreateClasslist.jsx";
->>>>>>> 46949b7d7e1f32b432ade8ea5c2391b0393fd98c
 // import Room from "./Components/Hall.jsx";
 import RoomsTimetable from "./Components/RoomsTimetable.js";
 import Lecturer from "./Pages/Lecturer/Lecturer.js";
