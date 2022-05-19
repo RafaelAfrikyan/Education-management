@@ -107,16 +107,15 @@ function lecturerReducer(state = [], action) {
           lecturer.name == action.payload.lecturerName &&
           lecturer.surname == action.payload.lecturerSurname
         ) {
-          Object.keys(lecturer['timeTable']).forEach(day => {
-        if(day == action.payload.roomDay) {
-          Object.keys(lecturer['timeTable'][day]).forEach(hour => {
-            if(hour == action.payload.roomHour) {
-              lecturer['timeTable'][day][hour] = action.payload.roomNumber
+          Object.keys(lecturer["timeTable"]).forEach((day) => {
+            if (day == action.payload.roomDay) {
+              Object.keys(lecturer["timeTable"][day]).forEach((hour) => {
+                if (hour == action.payload.roomHour) {
+                  lecturer["timeTable"][day][hour] = action.payload.roomNumber;
+                }
+              });
             }
-          })
-        }
-
-          })
+          });
         }
       });
     }
