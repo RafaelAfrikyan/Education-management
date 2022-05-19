@@ -47,13 +47,16 @@
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+  border-radius: 20%;
   background-color: rgb(240, 240, 240);
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .table {
   display: flex;
   flex-direction: column;
-  /* border: 1px solid black; */
   min-width: 280px;
 }
 .timetable-div {
@@ -149,8 +152,10 @@
 }
 
 .timetable-div:hover {
-  background-color: rgb(104, 104, 104);
+  background-color: rgb(66, 133, 244);
   color: white;
+  font-size: 20px;
+  font-weight: bolder;
   transform: scale(1.05);
 }
 
