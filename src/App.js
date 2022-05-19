@@ -2,7 +2,7 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout/Layout.jsx";
 import Lecturers from "./Pages/Lecturers/Lectures.jsx";
-import Home from "./Components/Home/Home.jsx";
+import Home from "./Components/Home.jsx";
 import CreateClasslist from "./Components/CreateClasslist/CreateClasslist.jsx";
 // import Room from "./Components/Hall.jsx";
 import RoomsTimetable from "./Components/RoomsTimetable/RoomsTimetable.js";
