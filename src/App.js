@@ -11,8 +11,6 @@ import Faculties from "./Pages/Faculties/Faculties.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import FacultiesTimetable from "./Components/FacultiesTimetable/FacultiesTimetable.jsx";
 
-
-
 function App() {
   return (
     <div className="App">

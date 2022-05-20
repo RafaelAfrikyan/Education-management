@@ -1,33 +1,38 @@
 import React from "react";
 import { useRef } from "react";
+import "./DrawTable.css"
 
 function DrawTable({ param }) {
   const divRef = useRef(null);
 
   return (
     <div className="wrapper">
-      <div className="day-timetabel">
-        <div>Monday</div>
-        <div>Tuesday</div>
-        <div>Wednesday</div>
-        <div>Thursday</div>
-        <div>Friday</div>
-      </div>
-      <div className="container">
-        <div className="hour-timetabel">
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
+      <div className="table-top-part">
+        <div className="empty-corner">empty height * width</div>
+        <div className="weekdays">
+          <div className="day">Monday</div>
+          <div className="day">Tuesday</div>
+          <div className="day">Wednesday</div>
+          <div className="day">Thursday</div>
+          <div className="day">Friday</div>
         </div>
+      </div>
+
+      <div className="table-bottom-part">
+        <div className="table-numbers">
+          <div className="day-hour">1</div>
+          <div className="day-hour">2</div>
+          <div className="day-hour">3</div>
+          <div className="day-hour">4</div>
+        </div>
+
         <div className="table-wrap">
           {Object.keys(param).map((day, i) => {
             return (
               <div key={i} className="table">
-                {/* <div className="day">Day{day}</div> */}
                 {Object.keys(param[day]).map((hour, i) => {
                   divRef.current = param[day][hour];
-                  console.log(divRef.current);
+
                   return (
                     <div
                       ref={divRef}
