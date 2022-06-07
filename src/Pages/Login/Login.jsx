@@ -5,7 +5,8 @@ export default function Login() {
   return (
     <div>
       This is Login page
-      <Link to="/home">Login</Link>
+      <Link to="/home">Home</Link>
+      <button className="login-button"> Login / Sign up </button>
     </div>
   );
 }
