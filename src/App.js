@@ -11,8 +11,6 @@ import Faculties from "./Pages/Faculties/Faculties.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import FacultiesTimetable from "./Components/FacultiesTimetable/FacultiesTimetable.jsx";
 
-
-
 function App() {
   return (
     <div className="App">
@@ -24,7 +22,7 @@ function App() {
           <Route path="lectures" element={<Lecturers />} />
           <Route path="home/:roomId" element={<RoomsTimetable />} />
           <Route path="lectures/:lecturerName" element={<Lecturer />} />
-          <Route path="course/:faculty" element={<FacultiesTimetable/>} />
+          <Route path="course/:faculty" element={<FacultiesTimetable />} />
           <Route path="course" element={<Faculties />} />
           <Route path="create" element={<CreateClasslist />} />
         </Route>
