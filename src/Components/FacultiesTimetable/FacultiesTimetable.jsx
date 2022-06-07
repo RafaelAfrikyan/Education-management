@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import DrawTable from "../DrawTable/DrawTable.js";
 import { faculties } from "../../state/state.js";
+import "./../../App.css"
 
 export default function FacultiesTimetable() {
   const { faculty } = useParams();
@@ -10,8 +11,9 @@ export default function FacultiesTimetable() {
   );
 
   return (
-    <div>
-      <h1>Faculties Timetable</h1>
+    <div className="faculty-timetable">
+      <h1 >{faculty} Timetable</h1>
+      <h3>Faculty size: {faculties[faculty].count}</h3>
       <DrawTable param={faculties[facultyID[0]].timeTable} />
     </div>
   );
