@@ -27,7 +27,7 @@ function DrawTable({ param }) {
                 {/* <div className="day">Day{day}</div> */}
                 {Object.keys(param[day]).map((hour, i) => {
                   divRef.current = param[day][hour];
-                  console.log(divRef.current);
+                  // console.log(divRef.current);
                   return (
                     <div
                       ref={divRef}
