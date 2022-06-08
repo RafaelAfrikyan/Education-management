@@ -161,7 +161,6 @@ function roomsReducer(state = {}, action) {
                     if (hour === action.payload.roomHour) {
                       state[size][number][day][hour] =
                         action.payload.facultiesName;
-                      // console.log(state);
                     }
                   });
                 }
