@@ -13,12 +13,16 @@ function RoomsTimetable() {
   const { roomId } = useParams();
   return (
     <>
-      {Object.keys(rooms).map((size, i) =>
-        Object.keys(rooms[size]).map(
-          (room, i) =>
-            room == roomId && <DrawTable key={i} param={rooms[size][room]} />
-        )
-      )}
+      <h1> Room Timetable</h1>
+      <h3>Room size: </h3>
+      <div>
+        {Object.keys(rooms).map((size, i) =>
+          Object.keys(rooms[size]).map(
+            (room, i) =>
+              room == roomId && <DrawTable key={i} param={rooms[size][room]} />
+          )
+        )}
+      </div>
     </>
   );
 }
