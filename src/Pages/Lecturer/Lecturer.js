@@ -1,8 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DrawTable from "../../Components/DrawTable/DrawTable.js";
-import LecturerInfo from "../../Components/LecturerInfo/LecturerInfo.js";
-import LecturersTimetable from "../../Components/LecturersTimetable/LecturersTimetable.js";
 import { lecturers } from "../../state/state.js";
 import "./Lecturer.css";
 
@@ -11,11 +9,13 @@ function Lecturer() {
   const filtered = lecturers.filter(
     (lecturer, i) => `${lecturer.name}${lecturer.surname}` == lecturerName
   );
-  const { name, surname, speciality } = filtered[0];
+  const { name, surname, speciality, img } = filtered[0];
+  console.log(img);
+  let image = img;
   return (
     <div className="singleLecturer">
       <div className="lecturer-info">
-        <img src="https://images1.content-hcs.com/commimg/myhotcourses/blog/post/myhc_78689.jpg" />
+        <img src={image} className="lecturer-img" />
         <div className="lecturer-name">
           <h3> Name: {name} </h3>
           <h3> Surname: {surname} </h3>
