@@ -4,6 +4,7 @@ import { ACA } from "../../state/data";
 import { createRooms } from "../../state/state";
 import Room from "../Hall/Hall";
 import { useRef, useState } from "react";
+import "./style.css"
 
 export default function Navbar() {
   const roomRef = useRef(null);
@@ -19,7 +20,7 @@ export default function Navbar() {
         <Link to="/home">Home</Link>
         <Link to="lectures">Lectures</Link>
         <Link to="course">Course</Link>
-        <button onClick={openModal}>Rooms</button>
+        <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
       </div>
       <Room isActive={isActive} roomRef={roomRef} />
