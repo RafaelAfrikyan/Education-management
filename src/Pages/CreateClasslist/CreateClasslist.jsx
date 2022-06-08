@@ -6,6 +6,7 @@ import { ACTION_TYPES } from "../../state/state";
 import "./../../App.css";
 
 export default function CreateClasslist() {
+  
   const dispatch = useDispatch();
   const { faculties, lecturers, rooms } = useSelector((state) => {
     return state;
