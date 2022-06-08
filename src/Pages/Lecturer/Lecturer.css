@@ -6,7 +6,7 @@
 
 .lecturer-info {
     border: 2px solid blue;
-    width: 30vw;
+    width: 50vw;
     max-height: 25vh;
     margin: 10px auto;
     display: flex;
@@ -17,7 +17,7 @@
 .lecturer-name{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: flex-start;
     height: 100%;
     width: auto;
@@ -26,6 +26,6 @@
 }
 
 .lecturer-img {
-    max-width: ;
+    max-width: 200px;
     max-height: 150px;
 }

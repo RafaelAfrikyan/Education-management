@@ -10,6 +10,7 @@ function Lecturer() {
     (lecturer, i) => `${lecturer.name}${lecturer.surname}` == lecturerName
   );
   const { name, surname, speciality, img } = filtered[0];
+  const mail = `${lecturerName}@gmail.com`; 
   console.log(img);
   let image = img;
   return (
@@ -17,9 +18,10 @@ function Lecturer() {
       <div className="lecturer-info">
         <img src={image} className="lecturer-img" />
         <div className="lecturer-name">
-          <h3> Name: {name} </h3>
-          <h3> Surname: {surname} </h3>
-          <h3> Speciality: {speciality}</h3>
+          <h3>Name: {name}</h3>
+          <h3>Surname:{surname}</h3>
+          <h3>Speciality: {speciality}</h3>
+          <h3>e-mail: {mail}</h3>
         </div>
       </div>
       <DrawTable param={filtered[0].timeTable} />
