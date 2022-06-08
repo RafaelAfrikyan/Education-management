@@ -1,31 +1,79 @@
 .singleLecturer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .lecturer-info {
-    border: 2px solid blue;
-    width: 50vw;
-    max-height: 25vh;
-    margin: 10px auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  border: 2px solid rgba(35, 146, 191, 1);
+  width: 50vw;
+  max-height: 25vh;
+  margin: 10px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
+  background-color: rgba(35, 146, 191, 0.8);
+  animation-name: card-bg;
+  animation-duration: 2s;
 }
 
-.lecturer-name{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100%;
-    width: auto;
+.lecturer-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: auto;
+  font-size: 24px;
+  color: black;
+  animation-name: font-size;
+  animation-duration: 2s;
+}
+
+@keyframes card-bg {
+  0% {
+    background-color: rgba(35, 146, 191, 0.1);
+    width: 10vw;
+  }
+  25% {
+    background-color: rgba(35, 146, 191, 0.3);
+    width: 20vw;
+  }
+  50% {
+    background-color: rgba(35, 146, 191, 0.5);
+    width: 30vw;
+  }
+  75% {
+    background-color: rgba(35, 146, 191, 0.7);
+    width: 40vw;
+  }
+  100% {
+    background-color: rgba(35, 146, 191, 0.9);
+    width: 50vw;
+  }
+}
+
+@keyframes font-size {
+  0% {
+    font-size: 4px;
+  }
+  25% {
+    font-size: 9px;
+  }
+  50% {
+    font-size: 13px;
+  }
+  75% {
+    font-size: 18px;
+  }
+  100% {
     font-size: 24px;
-   color: rgb(72, 133, 237);
+  }
 }
 
 .lecturer-img {
-    max-width: 200px;
-    max-height: 150px;
+  max-width: 200px;
+  max-height: 150px;
 }
