@@ -1,10 +1,13 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DrawTable from "../DrawTable/DrawTable.js";
-import { faculties } from "../../state/state.js";
-import "./../../App.css"
+
+import { useSelector } from "react-redux";
 
 export default function FacultiesTimetable() {
+  const faculties = useSelector((state) => {
+    return state.faculties;
+  });
   const { faculty } = useParams();
   let facultyID = Object.keys(faculties).filter(
     (singleFaculty) => singleFaculty == faculty
