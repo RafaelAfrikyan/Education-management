@@ -1,0 +1,27 @@
+.singleLecturer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lecturer-info {
+    border: 2px solid blue;
+    width: 50vw;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lecturer-name{
+    border: 2px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    height: 100%;
+    width: auto;
+    font-size: 24px;
+   color: rgb(72, 133, 237);
+}
