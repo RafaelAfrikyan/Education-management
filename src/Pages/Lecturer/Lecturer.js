@@ -18,10 +18,10 @@ function Lecturer() {
       <div className="lecturer-info">
         <img src={image} className="lecturer-img" />
         <div className="lecturer-name">
-          <h3>Name: {name}</h3>
-          <h3>Surname:{surname}</h3>
-          <h3>Speciality: {speciality}</h3>
-          <h3>e-mail: {mail}</h3>
+          <h3 className="lecturer-info-row1">Name: {name}</h3>
+          <h3 className="lecturer-info-row2">Surname: {surname}</h3>
+          <h3 className="lecturer-info-row3">Speciality: {speciality}</h3>
+          <h3 className="lecturer-info-row4">e-mail: {mail.toLowerCase()}</h3>
         </div>
       </div>
       <DrawTable param={filtered[0].timeTable} />
