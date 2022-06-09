@@ -16,21 +16,7 @@
   align-items: center;
   border: 1px solid black;
 }
-.roomModal {
-  width: 25%;
-  min-height: 60px;
-  margin-left: 365px;
-  display: none;
-  position: absolute;
-  z-index: 99;
-}
-.roomActiveModal {
-  width: 20%;
-  min-height: 60px;
-  margin-left: 535px;
-  position: absolute;
-  z-index: 99;
-}
+
 
 .roomNumber {
   background-color: rgb(240, 240, 240);

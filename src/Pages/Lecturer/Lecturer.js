@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import DrawTable from "../../Components/DrawTable/DrawTable.js";
-import LecturerInfo from "../../Components/LecturerInfo/LecturerInfo.js";
+import LecturerInfo from "../../Components/Layout/LecturerInfo/LecturerInfo.js";
 import LecturersTimetable from "../../Components/LecturersTimetable/LecturersTimetable.js";
 import { lecturers } from "../../state/state.js";
 import "./style.css"

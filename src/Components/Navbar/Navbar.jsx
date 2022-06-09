@@ -23,7 +23,7 @@ export default function Navbar() {
         <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
       </div>
-      <Room isActive={isActive} roomRef={roomRef} />
+      <Room isActive={isActive} roomRef={roomRef} setIsActive={setIsActive}/>
     </div>
   );
 }
