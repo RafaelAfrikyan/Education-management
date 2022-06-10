@@ -1,10 +1,9 @@
 import React from "react";
-import img from "../../assets/lecturer.webp";
 import { Link } from "react-router-dom";
 import "./styles.css";
 
 function SingleLecturer({ lecturer }) {
-  const { name, surname, speciality } = lecturer;
+  const { name, surname, speciality, img } = lecturer;
   return (
     <Link to={`${name}${surname}`} style={{ textDecoration: "none" }}>
       <div className="single-lecturer-wrapper">
