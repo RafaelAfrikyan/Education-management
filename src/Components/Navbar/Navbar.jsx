@@ -4,6 +4,7 @@ import { ACA } from "../../state/data";
 import { createRooms } from "../../state/state";
 import Room from "../Hall/Hall";
 import { useRef, useState } from "react";
+import "./style.css"
 
 import MailIcon from "@material-ui/icons/Mail.js";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline.js";
@@ -42,9 +43,7 @@ export default function OurMenu(props) {
       </CircleMenuItem>
       <CircleMenuItem tooltip="Help">
         <Link to="course">Course</Link>
-      </CircleMenuItem>
-      <CircleMenuItem tooltip="Location">Rooms</CircleMenuItem>
-      <CircleMenuItem tooltip="Info">
+        <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
       </CircleMenuItem>
     </CircleMenu>

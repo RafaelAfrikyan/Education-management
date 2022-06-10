@@ -3,7 +3,7 @@ import DisplayFaculties from "../../Components/DisplayFaculties/DisplayFaculties
 
 export default function Faculties() {
   return (
-    <div>
+    <div className="facultyWrapper">
       <h1>Welcome to Faculties page</h1>
       <div> Here are all faculties </div>
       <DisplayFaculties />

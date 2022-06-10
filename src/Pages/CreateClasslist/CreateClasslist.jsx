@@ -99,7 +99,7 @@ export default function CreateClasslist() {
   };
 
   return (
-    <div>
+    <div className="wrapperClasslist">
       {Object.keys(faculties)
         .filter((faculty, i) => {
           return Object.keys(faculties[faculty].lessons).map((item) => {
