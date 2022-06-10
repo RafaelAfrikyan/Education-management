@@ -86,7 +86,7 @@ export const rooms = createRooms(ACA);
 export const faculties = createFaculties(ACA);
 export const lecturers = createLecturers(ACA);
 const test = Object.keys(faculties);
-import { rooms, lecturers, faculties } from "./data.js";
+// import { rooms, lecturers, faculties } from "./data.js";
 
 
 export const ACTION_TYPES = {
