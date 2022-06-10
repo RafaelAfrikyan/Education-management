@@ -16,6 +16,10 @@
 .nameInfo {
     width: 60%;
     height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10%;
 }
 .education_menegement {
     width: 100%;

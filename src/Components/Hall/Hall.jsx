@@ -32,16 +32,16 @@ console.log(roomSize)
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>{`Room Size ${size}`}</Typography>
+              <Typography >{`Room Size ${size}`}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               {Object.keys(roomSize[size]).map((number, i) => {
                 return (
-                  <Typography  onClick={() => {
+                  <Typography  className="roomNumber" onClick={() => {
                     setIsActive(!isActive)
                   }} key={i}>
-                    <Link to={`home/${number}`}>
-                      <span className="roomNumber">{`Number ${number}`} </span>
+                    <Link className="roomNumber" to={`home/${number}`}>
+                       {`Number ${number}`}
                     </Link>
                   </Typography>
                 );
