@@ -4,20 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRef } from "react";
 import { ACTION_TYPES } from "../../state/state";
 import "./../../App.css";
+import { FoodBank } from "@mui/icons-material";
 
 export default function CreateClasslist() {
-  
   const dispatch = useDispatch();
-  const { faculties, lecturers, rooms } = useSelector((state) => {
+  const { faculties, lecturers, rooms, test } = useSelector((state) => {
     return state;
   });
 
-  // Object.keys(faculties).filter((faculty, i) => {
-  //   return Object.keys(faculties[faculty].lessons).filter((item) => {
-  //     return faculties[faculty].lessons[item] > 0;
-  //   });
-  // });
-  // console.log();
   let refer = useRef(null);
 
   const gago = (faculty, lecturers, rooms) => {
@@ -95,31 +89,32 @@ export default function CreateClasslist() {
     });
   };
 
+  function foo(name) {
+    dispatch({
+      type: ACTION_TYPES.DRAW_FACULTIES,
+      payload: {
+        name: name,
+      },
+    });
+  }
   return (
     <div className="wrapperClasslist">
-      {Object.keys(faculties)
-        .filter((faculty, i) => {
-          return Object.keys(faculties[faculty].lessons).map((item) => {
-            console.log(faculty, "lpppppp");
-            return faculties[faculty].lessons[item] > 100;
-          });
-        })
-        .map((element) => {
-          console.log(element);
-          return (
-            <div
-              className="create-button"
-              ref={refer}
-              onClick={(e) => {
-                refer.current.value = e.target.innerText;
-
-                gago(refer.current.value, lecturers, rooms);
-              }}
-            >
-              {element}
-            </div>
-          );
-        })}
+      {test.map((element) => {
+        return (
+          <div
+            key={Math.random()}
+            className="create-button"
+            ref={refer}
+            onClick={(e) => {
+              refer.current.value = e.target.innerText;
+              gago(refer.current.value, lecturers, rooms);
+              foo(e.target.innerText);
+            }}
+          >
+            {element}
+          </div>
+        );
+      })}
     </div>
   );
 }
