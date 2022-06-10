@@ -22,7 +22,6 @@ export default function Navbar({isActive, setIsActive }) {
         <Link to="course">Course</Link>
         <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
-        <Link to="menu">Menu</Link>
       </div>
       <Room isActive={isActive} roomRef={roomRef} setIsActive={setIsActive}/>
     </div>
