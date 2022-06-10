@@ -292,3 +292,86 @@ export const ACA = {
     },
   },
 };
+function createFaculties(university) {
+  let obj = {};
+
+  Object.keys(university.faculties).forEach((facultet) => {
+    obj[facultet] = {
+      lessons: {},
+      students: {},
+      count: university.faculties[facultet].students.length,
+      timeTable: {
+        1: {
+          1: null,
+          2: null,
+          3: null,
+          4: null,
+        },
+        2: { 1: null, 2: null, 3: null, 4: null },
+        3: { 1: null, 2: null, 3: null, 4: null },
+        4: { 1: null, 2: null, 3: null, 4: null },
+        5: { 1: null, 2: null, 3: null, 4: null },
+      },
+    };
+    university.faculties[facultet].syllabus.forEach((elem) => {
+      for (let prop in elem) {
+        obj[facultet].lessons[prop] = elem[prop];
+      }
+    });
+    university.faculties[facultet].students.forEach((elem, i) => {
+      for (let prop in elem) {
+        obj[facultet].students[i + 1] = elem;
+      }
+    });
+  });
+  return obj;
+}
+function createLecturers(university) {
+  //....
+  let lecturersObject = [];
+  const { lecturers } = university;
+  lecturers.forEach((lecturer) =>
+    lecturersObject.push({
+      ...lecturer,
+      timeTable: {
+        1: {
+          1: null,
+          2: null,
+          3: null,
+          4: null,
+        },
+        2: { 1: null, 2: null, 3: null, 4: null },
+        3: { 1: null, 2: null, 3: null, 4: null },
+        4: { 1: null, 2: null, 3: null, 4: null },
+        5: { 1: null, 2: null, 3: null, 4: null },
+      },
+    })
+  );
+
+  return lecturersObject;
+}
+export function createRooms(university) {
+  let rooms = {};
+  Object.keys(university.rooms).forEach((size) => {
+    rooms[size] = {};
+    university.rooms[size].forEach((num) => {
+      rooms[size][num] = {
+        1: {
+          1: null,
+          2: null,
+          3: null,
+          4: null,
+        },
+        2: { 1: null, 2: null, 3: null, 4: null },
+        3: { 1: null, 2: null, 3: null, 4: null },
+        4: { 1: null, 2: null, 3: null, 4: null },
+        5: { 1: null, 2: null, 3: null, 4: null },
+      };
+    });
+  });
+  return rooms;
+}
+
+export const rooms = createRooms(ACA);
+export const faculties = createFaculties(ACA);
+export const lecturers = createLecturers(ACA);
