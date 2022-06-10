@@ -1,12 +1,16 @@
 /* eslint-disable */
 
 import React from "react";
+import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { rooms } from "../../state/state.js";
+
 import DrawTable from "../DrawTable/DrawTable.js";
 import "./style.css"
 
 function RoomsTimetable() {
+  const rooms = useSelector((state) => {
+    return state.rooms;
+  });
   const { roomId } = useParams();
   console.log(roomId)
   return (

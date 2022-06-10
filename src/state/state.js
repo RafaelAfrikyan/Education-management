@@ -1,101 +1,19 @@
 import { combineReducers, createStore } from "redux";
 
-import { ACA } from "./data.js";
-
-function createFaculties(university) {
-  let obj = {};
-
-  Object.keys(university.faculties).forEach((facultet) => {
-    obj[facultet] = {
-      lessons: {},
-      students: {},
-      count: university.faculties[facultet].students.length,
-      timeTable: {
-        1: {
-          1: null,
-          2: null,
-          3: null,
-          4: null,
-        },
-        2: { 1: null, 2: null, 3: null, 4: null },
-        3: { 1: null, 2: null, 3: null, 4: null },
-        4: { 1: null, 2: null, 3: null, 4: null },
-        5: { 1: null, 2: null, 3: null, 4: null },
-      },
-    };
-    university.faculties[facultet].syllabus.forEach((elem) => {
-      for (let prop in elem) {
-        obj[facultet].lessons[prop] = elem[prop];
-      }
-    });
-    university.faculties[facultet].students.forEach((elem, i) => {
-      for (let prop in elem) {
-        obj[facultet].students[i + 1] = elem;
-      }
-    });
-  });
-  return obj;
-}
-function createLecturers(university) {
-  //....
-  let lecturersObject = [];
-  const { lecturers } = university;
-  lecturers.forEach((lecturer) =>
-    lecturersObject.push({
-      ...lecturer,
-      timeTable: {
-        1: {
-          1: null,
-          2: null,
-          3: null,
-          4: null,
-        },
-        2: { 1: null, 2: null, 3: null, 4: null },
-        3: { 1: null, 2: null, 3: null, 4: null },
-        4: { 1: null, 2: null, 3: null, 4: null },
-        5: { 1: null, 2: null, 3: null, 4: null },
-      },
-    })
-  );
-
-  return lecturersObject;
-}
-export function createRooms(university) {
-  let rooms = {};
-  Object.keys(university.rooms).forEach((size) => {
-    rooms[size] = {};
-    university.rooms[size].forEach((num) => {
-      rooms[size][num] = {
-        1: {
-          1: null,
-          2: null,
-          3: null,
-          4: null,
-        },
-        2: { 1: null, 2: null, 3: null, 4: null },
-        3: { 1: null, 2: null, 3: null, 4: null },
-        4: { 1: null, 2: null, 3: null, 4: null },
-        5: { 1: null, 2: null, 3: null, 4: null },
-      };
-    });
-  });
-  return rooms;
-}
-
-export const rooms = createRooms(ACA);
-export const faculties = createFaculties(ACA);
-export const lecturers = createLecturers(ACA);
+import { rooms, lecturers, faculties } from "./data.js";
 
 export const ACTION_TYPES = {
   ROOMS_TABLE: "ROOMS_TABLE",
   LECTURER_TABLE: "LECTURER_TABLE",
   FACULTIES_TABLE: "FACULTIES_TABLE",
+  ADD_LECTURERS: "ADD_LECTURERS",
+  ADD_ROOM: "ADD_ROOM",
 };
 
 const initialState = {
-  faculties,
   rooms,
   lecturers,
+  faculties,
 };
 
 function lecturerReducer(state = [], action) {
@@ -117,6 +35,29 @@ function lecturerReducer(state = [], action) {
           });
         }
       });
+      return state;
+    }
+    case ACTION_TYPES.ADD_LECTURERS: {
+      return [
+        ...state,
+        {
+          name: action.payload.name,
+          surname: action.payload.surname,
+          speciality: action.payload.speciality,
+          timeTable: {
+            1: {
+              1: null,
+              2: null,
+              3: null,
+              4: null,
+            },
+            2: { 1: null, 2: null, 3: null, 4: null },
+            3: { 1: null, 2: null, 3: null, 4: null },
+            4: { 1: null, 2: null, 3: null, 4: null },
+            5: { 1: null, 2: null, 3: null, 4: null },
+          },
+        },
+      ];
     }
   }
 
@@ -161,7 +102,6 @@ function roomsReducer(state = {}, action) {
                     if (hour === action.payload.roomHour) {
                       state[size][number][day][hour] =
                         action.payload.facultiesName;
-                      // console.log(state);
                     }
                   });
                 }
@@ -171,12 +111,34 @@ function roomsReducer(state = {}, action) {
         }
       });
     }
-  }
-  return state;
-}
 
-function reducer(state, action) {
-  switch (ACTION_TYPES) {
+    case ACTION_TYPES.ADD_ROOM: {
+      Object.keys(state).map((key) => {
+        if (key === [action.payload.size]) {
+          state.key = {
+            ...state.key,
+            [action.payload.number]: {
+              1: { 1: null, 2: null, 3: null, 4: null },
+              2: { 1: null, 2: null, 3: null, 4: null },
+              3: { 1: null, 2: null, 3: null, 4: null },
+              4: { 1: null, 2: null, 3: null, 4: null },
+              5: { 1: null, 2: null, 3: null, 4: null },
+            },
+          };
+        } else {
+          state[action.payload.size] = {
+            ...state[action.payload.size],
+            [action.payload.number]: {
+              1: { 1: null, 2: null, 3: null, 4: null },
+              2: { 1: null, 2: null, 3: null, 4: null },
+              3: { 1: null, 2: null, 3: null, 4: null },
+              4: { 1: null, 2: null, 3: null, 4: null },
+              5: { 1: null, 2: null, 3: null, 4: null },
+            },
+          };
+        }
+      });
+    }
   }
   return state;
 }

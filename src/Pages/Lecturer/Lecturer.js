@@ -7,10 +7,14 @@ import { lecturers } from "../../state/state.js";
 import "./style.css"
 
 function Lecturer() {
+  const lecturers = useSelector((state) => {
+    return state.lecturers;
+  });
   const { lecturerName } = useParams();
   const filtered = lecturers.filter(
     (lecturer, i) => `${lecturer.name}${lecturer.surname}` == lecturerName
   );
+
   const { name, surname, speciality } = filtered[0];
   return (
     <div className="lecturerWrapper">

@@ -7,8 +7,8 @@ import { useRef, useState } from "react";
 import "./style.css"
 
 export default function Navbar({isActive, setIsActive }) {
+
   const roomRef = useRef(null);
-  
 
   const openModal = () => {
     setIsActive(!isActive);
@@ -20,8 +20,9 @@ export default function Navbar({isActive, setIsActive }) {
         <Link to="/home">Home</Link>
         <Link to="lectures">Lectures</Link>
         <Link to="course">Course</Link>
-        <p onClick={openModal}>Rooms</p>
+        <button onClick={openModal}>Rooms</button>
         <Link to="create">Create Classlist</Link>
+        <Link to="menu">Menu</Link>
       </div>
       <Room isActive={isActive} roomRef={roomRef} setIsActive={setIsActive}/>
     </div>
