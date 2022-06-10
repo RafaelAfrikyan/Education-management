@@ -28,7 +28,7 @@ export default function Login({ user, setUser }) {
         <div className="nameInfo">
           <div className="education_menegement">
           <h1>Education</h1>
-          <h1>Menegement</h1>
+          <h1>Management</h1>
           </div>
           <div className="info">
             <p>Create your schedule</p>
