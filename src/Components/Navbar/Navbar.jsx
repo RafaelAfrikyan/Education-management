@@ -20,7 +20,7 @@ export default function Navbar({isActive, setIsActive }) {
         <Link to="/home">Home</Link>
         <Link to="lectures">Lectures</Link>
         <Link to="course">Course</Link>
-        <button onClick={openModal}>Rooms</button>
+        <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
         <Link to="menu">Menu</Link>
       </div>
