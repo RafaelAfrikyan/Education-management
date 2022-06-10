@@ -4,6 +4,7 @@ import DrawTable from "../../Components/DrawTable/DrawTable.js";
 import LecturerInfo from "../../Components/Layout/LecturerInfo/LecturerInfo.js";
 import LecturersTimetable from "../../Components/LecturersTimetable/LecturersTimetable.js";
 import { lecturers } from "../../state/state.js";
+import { useSelector } from "react-redux";
 import "./style.css"
 
 function Lecturer() {
