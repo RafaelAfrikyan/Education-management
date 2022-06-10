@@ -15,15 +15,19 @@ export default function CreateClasslist() {
   let refer = useRef(null);
 
   const gago = (faculty, lecturers, rooms) => {
-    Object.keys(faculties[faculty].lessons).forEach((lesson, i) => {
+    Object.keys(faculties[faculty].lessons).forEach((lesson) => {
+      console.log("leson", lesson);
       if (faculties[faculty].lessons[lesson] !== 0) {
+        console.log("faculties" , faculties[faculty].lessons[lesson] );
         lecturers.forEach((item) => {
           if (item.speciality === lesson) {
             Object.keys(item.timeTable).forEach((day) => {
               Object.keys(item.timeTable[day]).forEach((lectureHour) => {
                 if (!item.timeTable[day][lectureHour]) {
-                  Object.keys(rooms).forEach((size) => {
-                    if (size >= faculties[faculty].count) {
+                  Object.keys(rooms).sort((a, b) => a-b).forEach((size) => {
+                    if (
+                      size >= faculties[faculty].count
+                    ) {
                       Object.keys(rooms[size]).forEach((room) => {
                         Object.keys(rooms[size][room]).forEach((day) => {
                           Object.keys(rooms[size][room][day]).forEach(
