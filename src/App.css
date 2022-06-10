@@ -16,7 +16,23 @@
   align-items: center;
   border: 1px solid black;
 }
-
+.roomModal {
+  display: none;
+}
+.roomActiveModal {
+  width: 30%;
+  height: 50%;
+}
+.wrapperModal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  flex-direction: column;
+}
 
 .roomNumber {
   background-color: rgb(240, 240, 240);

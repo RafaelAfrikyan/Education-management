@@ -17,8 +17,12 @@ let roomSize = useSelector((state)=> state.rooms)
 
 console.log(roomSize)
   return (
-    <div className={isActive ? "roomActiveModal wrapperModal" : "roomModal"}>
-    <div ref={roomRef}  className="roomActiveModal">
+    <div className={isActive ? "roomActiveModal wrapperModal" : "roomModal"} onClick={() => {
+      setIsActive(!isActive)
+    }}>
+    <div ref={roomRef}  className="roomActiveModal" onClick={(e) => {
+      e.stopPropagation()
+    }}>
       {Object.keys(roomSize).map((size, i) => {
         console.log(size)
         return (

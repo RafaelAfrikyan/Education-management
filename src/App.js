@@ -22,15 +22,16 @@ function App() {
       isLog: false,
     }
   );
+  const [isActive, setIsActive] = useState(false);
 
   console.log(user)
 
   return (
-    <div className="App">
+    <div className={isActive ? " App roomActiveModal wrapperModal" : " App "}>
       <Routes>
         <Route path="/" element={<Login user={user} setUser={setUser} />} />
         <Route element={<ProtectedRoute user={user} />}>
-          <Route path="/home" element={<Layout />}>
+          <Route path="/home" element={<Layout isActive={isActive} setIsActive={setIsActive}/>}>
             <Route index element={<Home />} />
             <Route path="lectures" element={<Lecturers />} />
             <Route path="home/:roomId" element={<RoomsTimetable />} />

@@ -6,9 +6,9 @@ import Room from "../Hall/Hall";
 import { useRef, useState } from "react";
 import "./style.css"
 
-export default function Navbar() {
+export default function Navbar({isActive, setIsActive }) {
   const roomRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
+  
 
   const openModal = () => {
     setIsActive(!isActive);
