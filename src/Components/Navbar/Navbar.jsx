@@ -5,7 +5,6 @@ import { createRooms } from "../../state/state";
 import Room from "../Hall/Hall";
 import { useRef, useState } from "react";
 import "./style.css"
-
 import MailIcon from "@material-ui/icons/Mail.js";
 import HelpOutlineIcon from "@material-ui/icons/HelpOutline.js";
 import MapIcon from "@material-ui/icons/Map.js";
@@ -17,6 +16,9 @@ import {
   CircleMenuItem,
   TooltipPlacement,
 } from "react-circular-menu";
+
+// export default function Navbar({isActive, setIsActive }) {
+//   const roomRef = useRef(null);
 
 export default function OurMenu(props) {
   return (
@@ -45,8 +47,14 @@ export default function OurMenu(props) {
         <Link to="course">Course</Link>
         <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
+
+//       </div>
+//       <Room isActive={isActive} roomRef={roomRef} setIsActive={setIsActive}/>
+//     </div>
+
       </CircleMenuItem>
     </CircleMenu>
+
   );
 }
 
