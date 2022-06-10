@@ -4,20 +4,14 @@ import { useSelector, useDispatch } from "react-redux";
 import { useRef } from "react";
 import { ACTION_TYPES } from "../../state/state";
 import "./../../App.css";
+import { FoodBank } from "@mui/icons-material";
 
 export default function CreateClasslist() {
-  
   const dispatch = useDispatch();
-  const { faculties, lecturers, rooms } = useSelector((state) => {
+  const { faculties, lecturers, rooms, test } = useSelector((state) => {
     return state;
   });
 
-  // Object.keys(faculties).filter((faculty, i) => {
-  //   return Object.keys(faculties[faculty].lessons).filter((item) => {
-  //     return faculties[faculty].lessons[item] > 0;
-  //   });
-  // });
-  // console.log();
   let refer = useRef(null);
 
   const gago = (faculty, lecturers, rooms) => {
@@ -29,20 +23,13 @@ export default function CreateClasslist() {
               Object.keys(item.timeTable[day]).forEach((lectureHour) => {
                 if (!item.timeTable[day][lectureHour]) {
                   Object.keys(rooms).forEach((size) => {
-                    if (
-                      size >= faculties[faculty].count
-                      // Math.abs(size - faculties[faculty].count) < 10
-                      // ||
-                      // Math.abs(size - faculties[faculty].count) <= 20
-                    ) {
+                    if (size >= faculties[faculty].count) {
                       Object.keys(rooms[size]).forEach((room) => {
                         Object.keys(rooms[size][room]).forEach((day) => {
                           Object.keys(rooms[size][room][day]).forEach(
                             (roomHour) => {
                               if (!rooms[size][room][day][roomHour]) {
                                 if (faculties[faculty].lessons[lesson]) {
-                                  // faculties[faculty].lessons[lesson] =
-                                  //   faculties[faculty].lessons[lesson] - 1;
                                   dispatch({
                                     type: ACTION_TYPES.ROOMS_TABLE,
                                     payload: {
@@ -98,34 +85,32 @@ export default function CreateClasslist() {
     });
   };
 
+  function foo(name) {
+    dispatch({
+      type: ACTION_TYPES.DRAW_FACULTIES,
+      payload: {
+        name: name,
+      },
+    });
+  }
   return (
     <div className="wrapperClasslist">
-      {Object.keys(faculties)
-        .filter((faculty, i) => {
-          return Object.keys(faculties[faculty].lessons).map((item) => {
-            console.log(faculty, "lpppppp");
-            return faculties[faculty].lessons[item] > 100;
-          });
-        })
-        .map((element) => {
-          console.log(element);
-          return (
-            <div
-              className="create-button"
-              ref={refer}
-              onClick={(e) => {
-                refer.current.value = e.target.innerText;
-
-                gago(refer.current.value, lecturers, rooms);
-              }}
-            >
-              {element}
-            </div>
-          );
-        })}
+      {test.map((element) => {
+        return (
+          <div
+            key={Math.random()}
+            className="create-button"
+            ref={refer}
+            onClick={(e) => {
+              refer.current.value = e.target.innerText;
+              gago(refer.current.value, lecturers, rooms);
+              foo(e.target.innerText);
+            }}
+          >
+            {element}
+          </div>
+        );
+      })}
     </div>
   );
 }
-
-
-

@@ -1,3 +1,4 @@
+// import { act } from "react-dom/test-utils/index.js";
 import { combineReducers, createStore } from "redux";
 
 import { ACA } from "./data.js";
@@ -85,17 +86,20 @@ export function createRooms(university) {
 export const rooms = createRooms(ACA);
 export const faculties = createFaculties(ACA);
 export const lecturers = createLecturers(ACA);
+const test = Object.keys(faculties);
 
 export const ACTION_TYPES = {
   ROOMS_TABLE: "ROOMS_TABLE",
   LECTURER_TABLE: "LECTURER_TABLE",
   FACULTIES_TABLE: "FACULTIES_TABLE",
+  DRAW_FACULTIES: "DRAW_FACULTIES",
 };
 
 const initialState = {
   faculties,
   rooms,
   lecturers,
+  test,
 };
 
 function lecturerReducer(state = [], action) {
@@ -147,7 +151,14 @@ function facultiesReducer(state = {}, action) {
   }
   return state;
 }
-
+function testReducer(state = [], action) {
+  switch (action.type) {
+    case ACTION_TYPES.DRAW_FACULTIES: {
+      return state.filter((el) => el !== action.payload.name);
+    }
+  }
+  return state;
+}
 function roomsReducer(state = {}, action) {
   switch (action.type) {
     case ACTION_TYPES.ROOMS_TABLE: {
@@ -186,6 +197,7 @@ export const store = createStore(
     faculties: facultiesReducer,
     rooms: roomsReducer,
     lecturers: lecturerReducer,
+    test: testReducer,
   }),
   initialState
 );
