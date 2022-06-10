@@ -21,6 +21,7 @@
     width: 100%;
     height: 50%;
     display: flex;
+    justify-content: left;
     flex-direction: column;
 }
 .education_menegement > h1 {
@@ -32,6 +33,7 @@
     height: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: left;
 }
 .info > p {
     font-size: 30px;
