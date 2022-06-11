@@ -1,15 +1,15 @@
-import photo1 from "./../assets/lecturers/txa (1).jpg";
-import photo2 from "./../assets/lecturers/txa (1).png";
+import Gago from "./../assets/lecturers/txa (1).jpg";
+import Avet from "./../assets/lecturers/Avet.jpg";
 import photo3 from "../assets/lecturers/txa(1).jpeg";
 import photo4 from "../assets/lecturers/txa (5).jpg";
-import photo5 from "../assets/lecturers/axjik1.jpg";
+import Elen from "../assets/lecturers/Elen.jpg";
 import photo6 from "../assets/lecturers/txa (2).jpg";
-import photo7 from "../assets/lecturers/txa (3).jpg";
-import photo8 from "../assets/lecturers/txa (4).jpg";
-import photo9 from "../assets/lecturers/axjik2.jpg";
-import photo10 from "../assets/lecturers/axjik4.jpg";
-import photo11 from "../assets/lecturers/txa (7).jpg";
-import photo12 from "../assets/lecturers/txa (8).jpg";
+import Raf from "../assets/lecturers/Raf.jpg";
+import Hovo from "../assets/lecturers/hovhannesKocharyan.webp";
+import Sona from "../assets/lecturers/sona.webp";
+import Elmira from "../assets/lecturers/Elmira-Avagyan.jpeg";
+import Vrezh from "../assets/lecturers/Vrezh.jpg";
+import mger from "../assets/lecturers/mger.jpg";
 
 export const ACA = {
   rooms: {
@@ -24,13 +24,13 @@ export const ACA = {
       name: "Gago",
       surname: "Gagyan",
       speciality: "Java",
-      img: photo1,
+      img: Gago,
     },
     {
       name: "Avet",
       surname: "Badalyan",
       speciality: "UI/UX",
-      img: photo2,
+      img: Avet,
     },
     {
       name: "Eduard",
@@ -48,7 +48,7 @@ export const ACA = {
       name: "Elen",
       surname: "Ghazaryan",
       speciality: "JavaScript",
-      img: photo5,
+      img: Elen,
     },
     {
       name: "Edgar",
@@ -60,37 +60,37 @@ export const ACA = {
       name: "Rafayel",
       surname: "Afrikyan",
       speciality: "CSS",
-      img: photo7,
+      img: Raf,
     },
     {
       name: "Hovhannes",
       surname: "Kocharyan",
       speciality: "ReactJS",
-      img: photo8,
+      img: Hovo,
     },
     {
       name: "Sona",
       surname: "Shahgeldyan",
       speciality: "NodeJS",
-      img: photo9,
+      img: Sona,
     },
     {
       name: "Elmira",
       surname: "Avagyan",
       speciality: "JavaScript",
-      img: photo10,
+      img: Elmira,
     },
     {
       name: "Vrezh",
       surname: "Oganesyan",
       speciality: "HTML",
-      img: photo11,
+      img: Vrezh,
     },
     {
       name: "Mher",
       surname: "Armenia",
       speciality: "Python",
-      img: photo12,
+      img: mger,
     },
   ],
   faculties: {
