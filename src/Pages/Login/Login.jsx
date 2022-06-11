@@ -39,10 +39,10 @@ export default function Login({ user, setUser }) {
       <div className="loginFormWrapper">
         <div className="loginForm">
           <div className="form">
-          <input value={username} onChange={(e) => {
+          <input type="text" value={username} onChange={(e) => {
             setUsername(e.target.value)
           }} placeholder="LogIn"/>
-          <input value={pass} onChange={(e) => {
+          <input type="password" value={pass} onChange={(e) => {
             setPass(e.target.value)
           }}placeholder="Password"/>
           <Link to='/home' onClick={() => auth()}><h2>Log In</h2></Link>
