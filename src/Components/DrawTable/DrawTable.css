@@ -40,30 +40,6 @@
   text-transform: uppercase;
   font-style: italic;
   letter-spacing: 1px;
-  animation: opening 0.8s ease-in-out;
-}
-
-@keyframes opening {
-  0% {
-    background-color: rgba(35, 146, 191, 0.1);
-    width: 10%;
-  }
-  25% {
-    background-color: rgba(35, 146, 191, 0.3);
-    width: 20%;
-  }
-  50% {
-    background-color: rgba(35, 146, 191, 0.5);
-    width: 30%;
-  }
-  75% {
-    background-color: rgba(35, 146, 191, 0.7);
-    width: 40%;
-  }
-  100% {
-    background-color: rgba(35, 146, 191, 0.9);
-    width: 50%;
-  }
 }
 
 .day {
@@ -102,30 +78,6 @@
   text-transform: uppercase;
   font-style: italic;
   letter-spacing: 1px;
-  animation: numbers 0.8s ease-in-out;
-}
-
-@keyframes numbers {
-  0% {
-    background-color: rgba(35, 146, 191, 0.1);
-    width: 4%;
-  }
-  25% {
-    background-color: rgba(35, 146, 191, 0.3);
-    width: 8%;
-  }
-  50% {
-    background-color: rgba(35, 146, 191, 0.5);
-    width: 12%;
-  }
-  75% {
-    background-color: rgba(35, 146, 191, 0.7);
-    width: 16%;
-  }
-  100% {
-    background-color: rgba(35, 146, 191, 0.9);
-    width: 20%;
-  }
 }
 
 .table-wrap {
