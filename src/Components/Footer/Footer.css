@@ -1,11 +1,11 @@
 .footer {
-  background-color: black;
+  background-color: rgba(17, 27, 55, 0.98);
   padding-bottom: 20px;
 }
 
 .container {
   max-width: 80vw;
-  background-color: black;
+  background-color: rgba(17, 27, 55, 1);
   margin: auto;
 }
 
@@ -57,10 +57,11 @@ footer ul {
   font-weight: 400;
   display: block;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .footer-col ul li a:hover {
-  color: orangered;
+  color: rgb(84, 81, 255);
   padding-left: 10px;
   font-weight: 500;
 }
@@ -70,17 +71,18 @@ footer ul {
   height: 40px;
   width: 40px;
   color: white;
-  background-color: rgba(255, 69, 0, 1);
+  background-color: rgba(84, 81, 255, 1);
   margin: 0 10px 10px 0;
   text-align: center;
   line-height: 40px;
   border-radius: 20%;
   transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .footer-col .social-links a:hover {
-  color: rgba(255, 69, 0, 1);
-  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(17, 27, 55, 1);
+  background-color: rgba(255, 255, 255, 1);
   transform: scale(1.15);
 }
 

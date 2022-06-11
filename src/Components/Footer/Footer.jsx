@@ -12,7 +12,7 @@ export default function Footer() {
             width="100%"
             height="350"
             title="Google Map"
-            style={{ margin: "10px" }}
+            style={{ margin: "10px auto" }}
           ></iframe>
         </div>
         <div className="row">
