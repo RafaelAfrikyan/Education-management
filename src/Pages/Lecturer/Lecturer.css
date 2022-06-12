@@ -1,5 +1,6 @@
 .singleLecturer {
   display: flex;
+   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -8,7 +9,7 @@
 
 .lecturer-info {
   border: 2px solid rgba(35, 146, 191, 1);
-  width: 50vw;
+  width: 59.5vw;
   height: 30vh;
   margin: 10px auto;
   display: flex;
@@ -16,7 +17,7 @@
   align-items: center;
   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
   border-radius: 10px;
-  background: rgb(76, 38, 143);
+  background-color: rgb(36, 79, 153);
   color: rgb(153, 238, 180);
   animation: card-bg 0.8s ease-in-out;
 }
