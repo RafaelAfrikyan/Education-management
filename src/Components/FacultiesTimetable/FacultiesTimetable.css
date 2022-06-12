@@ -1,0 +1,32 @@
+.students-list-in-faculty {
+  display: flex;
+  flex-direction: column;
+  width: 74vw;
+  height: 25vh;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.student-name-in-faculty {
+  color: black;
+  border: 1px solid black;
+  width: 10vw;
+  color: white;
+  background-color: rgb(36, 79, 153);
+  border-radius: 2px;
+  
+}
+
+.faculty-timetable {
+  width: 100vw;
+  height: 95vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.faculty-timetable h1, .faculty-timetable h2, .faculty-timetable h3 {
+    color: white;
+}
