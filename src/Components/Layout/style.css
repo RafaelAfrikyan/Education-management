@@ -1,6 +1,7 @@
 .outletWrapper {
     width: 100vw;
     height: auto;
+    margin: auto;
     display: flex;
     justify-content: center;
 }
