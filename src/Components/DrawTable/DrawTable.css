@@ -65,13 +65,9 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  /* border: 1px solid black; */
   width: 20%;
   height: 100%;
-  /* border: 1px solid black; */
-  /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
   border-radius: 10px;
-  /* background: rgb(36, 79, 153); */
   color: rgb(153, 238, 180);
   text-align: center;
   font-family: "Avenir Next", sans-serif;
@@ -82,29 +78,6 @@
   letter-spacing: 1px;
   animation: numbers 0.8s ease-in-out;
 }
-
-/* @keyframes numbers {
-  0% {
-    background-color: rgba(35, 146, 191, 0.1);
-    width: 4%;
-  }
-  25% {
-    background-color: rgba(35, 146, 191, 0.3);
-    width: 8%;
-  }
-  50% {
-    background-color: rgba(35, 146, 191, 0.5);
-    width: 12%;
-  }
-  75% {
-    background-color: rgba(35, 146, 191, 0.7);
-    width: 16%;
-  }
-  100% {
-    background-color: rgba(35, 146, 191, 0.9);
-    width: 20%;
-  }
-} */
 
 .table-wrap {
   display: flex;
@@ -140,7 +113,6 @@
   box-sizing: border-box;
   border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.8);
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -155,7 +127,7 @@
 }
 .timetable-activ-Elen {
   border: 1px solid white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   border-radius: 5px;
   display: flex;
@@ -183,12 +155,12 @@
   justify-content: center;
   align-items: center;
   color: white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
 
 }
 .timetable-activ-Avet {
   border: 1px solid white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -204,7 +176,7 @@
 }
 .timetable-activ-Vrezh {
   border: 1px solid white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -220,7 +192,7 @@
 }
 .timetable-activ-Mher {
   border: 1px solid white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -236,7 +208,7 @@
 }
 .timetable-activ-Gago {
   border: 1px solid white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -252,7 +224,7 @@
 }
 .timetable-activ-Norayr {
   border: 1px solid white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -268,7 +240,7 @@
 }
 .timetable-activ-Eduard {
   border: 1px solid white;
-  background-color: rgb(36, 79, 153);
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
