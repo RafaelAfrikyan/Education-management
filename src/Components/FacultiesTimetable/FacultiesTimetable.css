@@ -1,0 +1,15 @@
+.students-list-in-faculty {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 25vh;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.student-name-in-faculty{
+    color: black;
+    border: 1px solid black;
+    width: 100%;
+}
