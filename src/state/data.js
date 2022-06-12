@@ -1,7 +1,7 @@
 import Gago from "./../assets/lecturers/txa (1).jpg";
 import Avet from "./../assets/lecturers/Avet.jpg";
 import photo3 from "../assets/lecturers/txa(1).jpeg";
-import photo4 from "../assets/lecturers/txa (5).jpg";
+import Noro from "../assets/lecturers/noro.jpg";
 import Elen from "../assets/lecturers/Elen.jpg";
 import photo6 from "../assets/lecturers/txa (2).jpg";
 import Raf from "../assets/lecturers/Raf.jpg";
@@ -42,7 +42,7 @@ export const ACA = {
       name: "Norayr",
       surname: "Hayrikyan",
       speciality: "Project Management",
-      img: photo4,
+      img: Noro,
     },
     {
       name: "Elen",
