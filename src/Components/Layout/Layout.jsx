@@ -7,9 +7,7 @@ export default function Layout({isActive, setIsActive}) {
   return (
     <>
       <Navbar isActive={isActive} setIsActive={setIsActive}/>
-      <div className="outletWrapper">
       <Outlet />
-      </div>
     </>
   );
 }

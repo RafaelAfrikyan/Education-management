@@ -7,17 +7,16 @@ function SingleLecturer({ lecturer }) {
   return (
     <Link to={`${name}${surname}`} style={{ textDecoration: "none" }}>
       <div className="single-lecturer-wrapper">
-        <div class="wrap-image">
-          <img src={img} alt="" />
-        </div>
-        {/* <div className="lecturer-info"> */}
-        <div className="text">
-          {name} {surname}
-        </div>
-        <div className="speciality-wrapper">{speciality}</div>
+          <div className="img">
+            Your photo
+          </div>
+          <div className="textWrapper">
+          <h1>{name} {surname}</h1>
+          <h1>{speciality}</h1>
+          </div>
         <div className="button-wrapper"></div>
-        {/* </div> */}
       </div>
+      
     </Link>
   );
 }

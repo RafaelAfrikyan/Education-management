@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./style.css";
 import { Link, Navigate } from "react-router-dom";
+import { memo } from "react";
+import { TryRounded } from "@mui/icons-material";
 
-
-
-export default function Login({ user, setUser }) {
+export default function Login({ setUser }) {
 
   const [username, setUsername] = useState('')
   const [pass, setPass] = useState('')
@@ -15,12 +15,12 @@ export default function Login({ user, setUser }) {
         {
           username: username,
           password: pass,
-          isLog: true
+          isLog: true,
         }
       )
-    }
-    
+    } 
   }
+  
 
   return (
     <div className="wrapperLogin">
@@ -52,3 +52,5 @@ export default function Login({ user, setUser }) {
     </div>
   );
 }
+
+

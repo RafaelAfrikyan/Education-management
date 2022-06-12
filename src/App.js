@@ -11,25 +11,31 @@ import Faculties from "./Pages/Faculties/Faculties.jsx";
 import Login from "./Pages/Login/Login.jsx";
 import FacultiesTimetable from "./Components/FacultiesTimetable/FacultiesTimetable.jsx";
 import ProtectedRoute from "./Components/ProtectedRoute/ProtectedRoute.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import ProtectedLogin from "./Components/ProtectedRoute/ProtectedLogin.jsx";
 
 function App() {
 
-  const [user, setUser] = useState(
-    {
-      username: '',
-      password: '',
-      isLog: false,
-    }
-  );
+  function getItem(){
+    const data = localStorage.getItem("user");
+    return data ? JSON.parse(data) : {isLog: false}
+  }
+
+  const [user, setUser] = useState(getItem());
   const [isActive, setIsActive] = useState(false);
 
-  console.log(user)
+  useEffect(() => {
+    localStorage.setItem("user", JSON.stringify(user))
+  },[user]);
 
+
+  console.log(user)
   return (
-    <div className={isActive ? " App roomActiveModal wrapperModal" : " App "}>
+    <div className="App">
       <Routes>
-        <Route path="/" element={<Login user={user} setUser={setUser} />} />
+        <Route element={<ProtectedLogin user={user}/>}>
+          <Route path="/" element={<Login setUser={setUser} />} />
+        </Route>
         <Route element={<ProtectedRoute user={user} />}>
           <Route path="/home" element={<Layout isActive={isActive} setIsActive={setIsActive}/>}>
             <Route index element={<Home />} />

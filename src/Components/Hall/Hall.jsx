@@ -17,7 +17,7 @@ let roomSize = useSelector((state)=> state.rooms)
 
 console.log(roomSize)
   return (
-    <div className={isActive ? "roomActiveModal wrapperModal" : "roomModal"} onClick={() => {
+    <div className={isActive ? " wrapperModal" : "roomModal"} onClick={() => {
       setIsActive(!isActive)
     }}>
     <div ref={roomRef}  className="roomActiveModal" onClick={(e) => {

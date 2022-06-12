@@ -29,7 +29,7 @@ export const ACA = {
     {
       name: "Avet",
       surname: "Badalyan",
-      speciality: "UI/UX",
+      speciality: "UI-UX",
       img: photo2,
     },
     {
@@ -146,9 +146,9 @@ export const ACA = {
         { name: "name", surname: "surname" },
       ],
     },
-    "UI/IX Bootcamp": {
+    "UI-UX Bootcamp": {
       syllabus: [
-        { "UI/UX": 5 },
+        { "UI-UX": 5 },
         { HTML: 5 },
         { CSS: 5 },
         { "Project Management": 2 },
@@ -243,7 +243,7 @@ export const ACA = {
     },
     "Project Management": {
       syllabus: [
-        { "UI/UX": 5 },
+        { "UI-UX": 5 },
         { HTML: 3 },
         { CSS: 2 },
         { "Project Management": 7 },

@@ -14,10 +14,7 @@ function RoomsTimetable() {
   const { roomId } = useParams();
   console.log(roomId)
   return (
-    <div className="wrapperRoomTimetable">
-      <h1> Room Timetable</h1>
-      <h3>Room size: {}</h3>
-      <div>
+      <div className="wrapperRoom">
         {Object.keys(rooms).map((size, i) =>
           Object.keys(rooms[size]).map(
             (room, i) =>
@@ -25,7 +22,6 @@ function RoomsTimetable() {
           )
         )}
       </div>
-    </div>
   );
 }
 
