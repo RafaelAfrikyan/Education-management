@@ -112,3 +112,46 @@
   padding: 1%;
 }
 
+.add-lecturer-input,
+.add-room-input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.add-inputs-modal {
+  background-color: rgba(84, 81, 255, 0.85);
+  color: white;
+  width: 40vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  border-radius: 10px;
+}
+
+.add-inputs-modal button:hover {
+  color: white;
+  background-color: rgba(84, 81, 255, 1);
+  border: none;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.add-inputs-modal button {
+  color: rgba(84, 81, 255, 1);
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.add-room-input input,
+button {
+  font-size: 24px;
+}
