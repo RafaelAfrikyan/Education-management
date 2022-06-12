@@ -23,7 +23,7 @@ function Lecturer() {
   let image = img;
   return (
     <div className="singleLecturer">
-      <div className="lecturer-info">
+      {/* <div className="lecturer-info">
         <img src={image} className="lecturer-img" />
         <div className="lecturer-name">
           <h3 className="lecturer-info-row1">Name: {name}</h3>
@@ -31,7 +31,7 @@ function Lecturer() {
           <h3 className="lecturer-info-row3">Speciality: {speciality}</h3>
           <h3 className="lecturer-info-row4">e-mail: {mail.toLowerCase()}</h3>
         </div>
-      </div>
+      </div> */}
       <DrawTable param={filtered[0].timeTable} />
     </div>
   );

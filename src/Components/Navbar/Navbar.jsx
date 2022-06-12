@@ -17,10 +17,10 @@ export default function Navbar({isActive, setIsActive}) {
 
   return (
     <div className="navbarWrap">
-      <div className="Navbar">
+      <div className={isActive ? "none" : "Navbar"}>
         <Link to="/home">Home</Link>
         <Link to="lectures">Lectures</Link>
-        <Link to="course">Course</Link>
+        <Link to="course">Faculties</Link>
         <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./../../Pages/Faculties/Faculties.css";
+import "./style.css"
 
 export default function SingleFaculty({ facultyName, count, props }) {
   return (

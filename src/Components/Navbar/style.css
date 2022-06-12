@@ -1,18 +1,50 @@
 .navbarWrap {
     width: 100%;
     height: 5%;
+    border-radius: 0  0px 10px 10px ; 
+    border: 1.5px solid rgb(36, 79, 153);
+    border-top: none;
+    z-index: 1;
 }
 .Navbar {
     width: 100%;
     height: 100%;
+    background-color: white;
+    border: none;
+    border-radius:0 0px  10px  10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 .Navbar > a {
     text-decoration: none;
-    font-size: large;
-    font-weight: 900;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(36, 79, 153);
+    transition: 0.5s;
+}
+.Navbar > a:hover {
+    font-size: 25px;
+    background-color: rgb(36, 79, 153);
+    color: white;   
+    border-radius: 10px;
+    padding: 1%;
 }
 .Navbar > p {
-    font-size: large;
-    font-weight: 900;
+    font-size: 20px;
+    font-weight: 500;
     cursor: pointer;
+    color: rgb(36, 79, 153);
+    transition: 0.5s;
 }
+.Navbar > p:hover {
+    font-size: 25px;
+    background-color: rgb(36, 79, 153);
+    color: white;   
+    border-radius: 10px;
+    padding: 1%;
+}
+.none {
+    display: none;
+}
+

@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useRef } from "react";
 import { ACTION_TYPES } from "../../state/state";
-import "./../../App.css";
+import "./style.css"
 import { FoodBank } from "@mui/icons-material";
 
 export default function CreateClasslist() {

@@ -9,9 +9,11 @@ function Lecturers() {
   });
   return (
     <div className="lecturers-wrapper">
+      <div className="lecturers">
       {lecturers.map((lecturer, i) => (
         <SingleLecturer key={i} lecturer={lecturer} />
       ))}
+      </div>
     </div>
     
   );

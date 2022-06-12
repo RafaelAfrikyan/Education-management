@@ -10,6 +10,13 @@
   display: none;
 }
 
+
+.roomNumber {
+    text-decoration: none;
+    font-weight: 900;
+    color: black;
+    font-size: large;
+}
 .wrapperModal {
     width: 100%;
     height: 100%;
@@ -17,15 +24,7 @@
     position: fixed;
     display: flex;
     justify-content: center;
-    align-items: center; 
-    flex-direction: column;
-    z-index: 100000;
-}
-.roomNumber {
-    text-decoration: none;
-    font-weight: 900;
-    color: black;
-    font-size: large;
+    align-items: center;
 }
 
   
