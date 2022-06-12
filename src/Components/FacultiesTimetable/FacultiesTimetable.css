@@ -25,6 +25,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding: 8px;
 }
 
 .faculty-timetable h1, .faculty-timetable h2, .faculty-timetable h3 {

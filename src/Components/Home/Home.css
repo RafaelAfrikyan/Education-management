@@ -73,7 +73,19 @@
   margin-top: 2%;
   font-weight: 500;
   padding: 1%;
+  background-color: rgb(36, 79, 153);
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.5s;
 }
+
+.lecturerInput > button:hover {
+  color: rgb(36, 79, 153);
+  background-color: white;
+  font-weight: bold;
+}
+
 .lecturerInput > input {
   width: 50%;
   height: 35%;
@@ -110,6 +122,17 @@
   margin-top: 2%;
   font-weight: 500;
   padding: 1%;
+  background-color: rgb(36, 79, 153);
+  color: white;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: 0.5s;
+}
+
+.roomInput > button:hover {
+  color: rgb(36, 79, 153);
+  background-color: white;
+    font-weight: bold;
 }
 
 .home-page-animation {
