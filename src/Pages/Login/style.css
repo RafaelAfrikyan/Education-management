@@ -3,7 +3,7 @@
   height: 100%;
   display: flex;
   flex-direction: row;
-  animation: homeBG 40s ease-in-out infinite;
+  background: rgba(240, 242, 245, 1);
   background-size: cover;
 }
 
@@ -99,38 +99,4 @@
 }
 .form > a:hover {
   background-color: rgb(136, 175, 255);
-}
-
-@keyframes homeBG {
-  0%,
-  100% {
-    background-image: url("./../../assets/home//home\ \(1\).jpg");
-  }
-  10% {
-    background-image: url("./../../assets//home/home\ \(2\).jpg");
-  }
-  20% {
-    background-image: url("./../../assets//home/home\ \(3\).jpg");
-  }
-  30% {
-    background-image: url("./../../assets//home/home\ \(4\).jpg");
-  }
-  40% {
-    background-image: url("./../../assets//home/home\ \(5\).jpg");
-  }
-  50% {
-    background-image: url("./../../assets/home/home\ \(6\).jpg");
-  }
-  60% {
-    background-image: url("./../../assets//home/home\ \(7\).jpg");
-  }
-  70% {
-    background-image: url("./../../assets//home/home\ \(8\).jpg");
-  }
-  80% {
-    background-image: url("./../../assets//home/home\ \(9\).jpg");
-  }
-  90% {
-    background-image: url("./../../assets//home/home\ \(10\).jpg");
-  }
 }

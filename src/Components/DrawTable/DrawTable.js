@@ -8,7 +8,7 @@ function DrawTable({ param }) {
   return (
     <div className="wrapper">
       <div className="table-top-part">
-        <div className="empty-corner"></div>
+        <div className="empty-corner">Schedule</div>
         <div className="weekdays">
           <div className="day">Monday</div>
           <div className="day">Tuesday</div>

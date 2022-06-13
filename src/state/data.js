@@ -1,15 +1,15 @@
-import Gago from "./../assets/lecturers/txa (1).jpg";
+import Gago from "./../assets/lecturers/image1.jpg";
 import Avet from "./../assets/lecturers/Avet.jpg";
-import photo3 from "../assets/lecturers/txa(1).jpeg";
+import photo3 from "../assets/lecturers/image.jpg";
 import Noro from "../assets/lecturers/noro.jpg";
 import Elen from "../assets/lecturers/Elen.jpg";
-import photo6 from "../assets/lecturers/txa (2).jpg";
+import photo6 from "../assets/lecturers/image3.jpg";
 import Raf from "../assets/lecturers/Raf.jpg";
-import Hovo from "../assets/lecturers/hovhannesKocharyan.webp";
-import Sona from "../assets/lecturers/sona.webp";
+import Hovo from "../assets/lecturers/hovhannesKocharyan.jpg";
+import Sona from "../assets/lecturers/sona.jpg";
 import Elmira from "../assets/lecturers/Elmira-Avagyan.jpeg";
 import Vrezh from "../assets/lecturers/Vrezh.jpg";
-import mger from "../assets/lecturers/mger.jpg";
+import Anna from "../assets/lecturers/Anna.jpg";
 
 export const ACA = {
   rooms: {
@@ -87,10 +87,10 @@ export const ACA = {
       img: Vrezh,
     },
     {
-      name: "Mher",
-      surname: "Armenia",
+      name: "Anna",
+      surname: "Minasyan",
       speciality: "Python",
-      img: mger,
+      img: Anna,
     },
   ],
   faculties: {
@@ -146,7 +146,7 @@ export const ACA = {
         { name: "name", surname: "surname" },
       ],
     },
-    "UI/IX Bootcamp": {
+    "UI-UX Bootcamp": {
       syllabus: [
         { "UI/UX": 5 },
         { HTML: 5 },

@@ -5,7 +5,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding-top: 10%
+  padding-top: 10%;
 }
 
 .textWrapper {
@@ -43,6 +43,11 @@
   justify-content: center;
   align-items: center;
   color: white;
+}
+.img > img {
+  /* width: 40%;
+  height: 45%; */
+  border-radius: 50%;
 }
 
 .speciality-wrapper {
