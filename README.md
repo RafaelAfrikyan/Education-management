@@ -1,3 +1,16 @@
+# CUSTOM STUDY MANAGEMENT
+# CREATE YOUR OWN CLASS SCHEDULE
+
+![login](./src//assets/readme%20screenshots/login.jpg)
+![home](./src//assets/readme%20screenshots/home.jpg)
+![footer](./src//assets/readme%20screenshots/footer.jpg)
+![create](./src//assets/readme%20screenshots/create.jpg)
+![faculties](./src//assets/readme%20screenshots/faculties.jpg)
+![single-faculty](./src//assets/readme%20screenshots/single-faculty.jpg)
+![lecturers](./src//assets/readme%20screenshots/lectures.jpg)
+![single-lecture](./src//assets/readme%20screenshots/single-lecture.jpg)
+![Room](./src//assets/readme%20screenshots/Room.jpg)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
