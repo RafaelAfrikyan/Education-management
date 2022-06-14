@@ -4,10 +4,12 @@ import { ACA } from "../../state/data";
 import { createRooms } from "../../state/state";
 import Room from "../Hall/Hall";
 import { useRef, useState } from "react";
+import "./style.css";
 
-export default function Navbar() {
+
+
+export default function Navbar({isActive, setIsActive}) {
   const roomRef = useRef(null);
-  const [isActive, setIsActive] = useState(false);
 
   const openModal = () => {
     setIsActive(!isActive);
@@ -15,14 +17,14 @@ export default function Navbar() {
 
   return (
     <div className="navbarWrap">
-      <div className="Navbar">
+      <div className={isActive ? "none" : "Navbar"}>
         <Link to="/home">Home</Link>
         <Link to="lectures">Lectures</Link>
-        <Link to="course">Course</Link>
-        <button onClick={openModal}>Rooms</button>
+        <Link to="course">Faculties</Link>
+        <p onClick={openModal}>Rooms</p>
         <Link to="create">Create Classlist</Link>
       </div>
-      <Room isActive={isActive} roomRef={roomRef} />
+      <Room isActive={isActive} roomRef={roomRef} setIsActive={setIsActive} />
     </div>
   );
 }

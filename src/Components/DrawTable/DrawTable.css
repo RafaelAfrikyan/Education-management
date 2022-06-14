@@ -1,17 +1,14 @@
 .wrapper {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
-  border: 1px solid red;
-  text-align: center;
-  height: 100vh;
+  width: 60%;
+  height: 60%;
 }
 
 .table-top-part {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid yellow;
   height: 20%;
 }
 
@@ -21,32 +18,50 @@
   align-items: center;
   height: 100%;
   width: 20%;
-  border: 1px solid black;
+  color: white;
+  font-size: larger;
+  border: 1px solid white;
+  border-radius: 10px;
+
 }
 
 .weekdays {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid green;
   height: 100%;
   width: 80%;
+  /* border: 1px solid black; */
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  border-radius: 10px;
+  /* background: rgb(76, 38, 143); */
+  color: rgb(153, 238, 180);
+  text-align: center;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 1px;
 }
 
 .day {
   width: 20%;
-  border: 1px solid teal;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
+  background-color: rgb(36, 79, 153)  ;
+  border: 2px solid white;
+  font-size: large;
+  color: white;
 }
 
 .table-bottom-part {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid purple;
   height: 80%;
 }
 
@@ -55,9 +70,18 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid rgb(219, 50, 54);
   width: 20%;
   height: 100%;
+  border-radius: 10px;
+  color: rgb(153, 238, 180);
+  text-align: center;
+  font-family: "Avenir Next", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  text-transform: uppercase;
+  font-style: italic;
+  letter-spacing: 1px;
+  animation: numbers 0.8s ease-in-out;
 }
 
 .table-wrap {
@@ -67,7 +91,6 @@
   text-align: center;
   width: 80%;
   height: 100%;
-  border: 1px solid orangered;
 }
 
 .table {
@@ -75,26 +98,27 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blue;
   width: 80%;
   height: 100%;
 }
 
 .day-hour {
-  border: 1px solid orchid;
   width: 100%;
   height: 25%;
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgb(36, 79, 153)
 }
 
 .timetable-div {
   box-sizing: border-box;
-  border: 1px solid black;
+  border: 1px solid white;
   background-color: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 5px;
+  border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -104,11 +128,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: opening 0.8s ease-in-out;
 }
 .timetable-activ-Elen {
-  border: 1px solid black;
-  background-color: rgb(120, 46, 48);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 1px solid white;
+  background-color: rgba(19,30,58, 0.8);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -119,10 +144,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .timetable-activ-Rafayel {
-  border: 1px solid black;
-  background-color: rgb(244, 194, 13);
+  border: 1px solid white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -134,10 +159,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
+  background-color: rgba(19,30,58, 0.8);
+
 }
 .timetable-activ-Avet {
-  border: 1px solid black;
-  background-color: rgb(60, 186, 84);
+  border: 1px solid white;
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -149,10 +177,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .timetable-activ-Vrezh {
-  border: 1px solid black;
-  background-color: rgb(219, 50, 54);
+  border: 1px solid white;
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -164,10 +193,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .timetable-activ-Mher {
-  border: 1px solid black;
-  background-color: rgb(72, 133, 237);
+  border: 1px solid white;
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -179,10 +209,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .timetable-activ-Gago {
-  border: 1px solid black;
-  background-color: rgb(65, 120, 46);
+  border: 1px solid white;
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -194,10 +225,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .timetable-activ-Norayr {
-  border: 1px solid black;
-  background-color: rgb(143, 205, 195);
+  border: 1px solid white;
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -209,10 +241,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 .timetable-activ-Eduard {
-  border: 1px solid black;
-  background-color: rgb(143, 147, 147);
+  border: 1px solid white;
+  background-color: rgba(19,30,58, 0.8);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   display: flex;
@@ -224,12 +257,5 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.timetable-div:hover {
-  background-color: rgb(66, 133, 244);
   color: white;
-  font-size: 20px;
-  font-weight: bolder;
-  transform: scale(1.01);
 }

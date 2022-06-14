@@ -9,13 +9,22 @@ import { createRooms } from "../../state/state";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+import "./style.css"
 
-export default function Room({ roomRef, isActive }) {
+export default function Room({ roomRef, isActive, setIsActive }) {
   // let roomSize = createRooms(ACA);
 let roomSize = useSelector((state)=> state.rooms)
+
+console.log(roomSize)
   return (
-    <div ref={roomRef} className={isActive ? "roomActiveModal" : "roomModal"}>
+    <div className={isActive ? " wrapperModal" : "roomModal"} onClick={() => {
+      setIsActive(!isActive)
+    }}>
+    <div ref={roomRef}  className="roomActiveModal" onClick={(e) => {
+      e.stopPropagation()
+    }}>
       {Object.keys(roomSize).map((size, i) => {
+        console.log(size)
         return (
           <Accordion key={i}>
             <AccordionSummary
@@ -23,14 +32,16 @@ let roomSize = useSelector((state)=> state.rooms)
               aria-controls="panel2a-content"
               id="panel2a-header"
             >
-              <Typography>{`Room Size ${size}`}</Typography>
+              <Typography >{`Room Size ${size}`}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               {Object.keys(roomSize[size]).map((number, i) => {
                 return (
-                  <Typography key={i}>
-                    <Link to={`home/${number}`}>
-                      <span className="roomNumber">{`Number ${number}`} </span>
+                  <Typography  className="roomNumber" onClick={() => {
+                    setIsActive(!isActive)
+                  }} key={i}>
+                    <Link className="roomNumber" to={`home/${number}`}>
+                       {`Number ${number}`}
                     </Link>
                   </Typography>
                 );
@@ -40,5 +51,6 @@ let roomSize = useSelector((state)=> state.rooms)
         );
       })}
     </div>
-  );
+    </div>
+  )
 }

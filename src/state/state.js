@@ -1,5 +1,5 @@
+// import { act } from "react-dom/test-utils/index.js";
 import { combineReducers, createStore } from "redux";
-
 import { ACA } from "./data.js";
 
 function createFaculties(university) {
@@ -85,17 +85,27 @@ export function createRooms(university) {
 export const rooms = createRooms(ACA);
 export const faculties = createFaculties(ACA);
 export const lecturers = createLecturers(ACA);
+const test = Object.keys(faculties);
+// import { rooms, lecturers, faculties } from "./data.js";
+
 
 export const ACTION_TYPES = {
   ROOMS_TABLE: "ROOMS_TABLE",
   LECTURER_TABLE: "LECTURER_TABLE",
   FACULTIES_TABLE: "FACULTIES_TABLE",
+
+  DRAW_FACULTIES: "DRAW_FACULTIES",
+
+  ADD_LECTURERS: "ADD_LECTURERS",
+  ADD_ROOM: "ADD_ROOM",
+
 };
 
 const initialState = {
-  faculties,
   rooms,
   lecturers,
+  test,
+  faculties,
 };
 
 function lecturerReducer(state = [], action) {
@@ -117,6 +127,29 @@ function lecturerReducer(state = [], action) {
           });
         }
       });
+      return state;
+    }
+    case ACTION_TYPES.ADD_LECTURERS: {
+      return [
+        ...state,
+        {
+          name: action.payload.name,
+          surname: action.payload.surname,
+          speciality: action.payload.speciality,
+          timeTable: {
+            1: {
+              1: null,
+              2: null,
+              3: null,
+              4: null,
+            },
+            2: { 1: null, 2: null, 3: null, 4: null },
+            3: { 1: null, 2: null, 3: null, 4: null },
+            4: { 1: null, 2: null, 3: null, 4: null },
+            5: { 1: null, 2: null, 3: null, 4: null },
+          },
+        },
+      ];
     }
   }
 
@@ -147,7 +180,14 @@ function facultiesReducer(state = {}, action) {
   }
   return state;
 }
-
+function testReducer(state = [], action) {
+  switch (action.type) {
+    case ACTION_TYPES.DRAW_FACULTIES: {
+      return state.filter((el) => el !== action.payload.name);
+    }
+  }
+  return state;
+}
 function roomsReducer(state = {}, action) {
   switch (action.type) {
     case ACTION_TYPES.ROOMS_TABLE: {
@@ -161,7 +201,6 @@ function roomsReducer(state = {}, action) {
                     if (hour === action.payload.roomHour) {
                       state[size][number][day][hour] =
                         action.payload.facultiesName;
-                      // console.log(state);
                     }
                   });
                 }
@@ -171,12 +210,34 @@ function roomsReducer(state = {}, action) {
         }
       });
     }
-  }
-  return state;
-}
 
-function reducer(state, action) {
-  switch (ACTION_TYPES) {
+    case ACTION_TYPES.ADD_ROOM: {
+      Object.keys(state).map((key) => {
+        if (key === [action.payload.size]) {
+          state.key = {
+            ...state.key,
+            [action.payload.number]: {
+              1: { 1: null, 2: null, 3: null, 4: null },
+              2: { 1: null, 2: null, 3: null, 4: null },
+              3: { 1: null, 2: null, 3: null, 4: null },
+              4: { 1: null, 2: null, 3: null, 4: null },
+              5: { 1: null, 2: null, 3: null, 4: null },
+            },
+          };
+        } else {
+          state[action.payload.size] = {
+            ...state[action.payload.size],
+            [action.payload.number]: {
+              1: { 1: null, 2: null, 3: null, 4: null },
+              2: { 1: null, 2: null, 3: null, 4: null },
+              3: { 1: null, 2: null, 3: null, 4: null },
+              4: { 1: null, 2: null, 3: null, 4: null },
+              5: { 1: null, 2: null, 3: null, 4: null },
+            },
+          };
+        }
+      });
+    }
   }
   return state;
 }
@@ -186,6 +247,7 @@ export const store = createStore(
     faculties: facultiesReducer,
     rooms: roomsReducer,
     lecturers: lecturerReducer,
+    test: testReducer,
   }),
   initialState
 );
